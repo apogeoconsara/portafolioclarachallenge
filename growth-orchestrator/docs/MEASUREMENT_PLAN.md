@@ -47,9 +47,10 @@ a point to settle with Clara's real volumes.
 **The rule for the AI.** It stays in a task only if B2 beats B1 on qualified pipeline per 1,000 targeted accounts **and** on
 cost per qualified lead, without breaking a guardrail, and with zero unsafe AI actions. Reviewer corrections of its labels are
 tracked so that a reviewer's workload does not simply replace the SDR's. If it does not win, it is switched off there and the
-rules keep working. The decision log lists the AI as
-unproven for personalisation today: only one of the two live-eval cases where personalisation was possible was personalised,
-and nothing yet ties it to pipeline.
+rules keep working. The AI already personalises: in the recorded month it wrote the opening line of 4,099 of 6,759 outreach
+drafts (the model's answer in that run is an offline stand-in). What nothing yet shows is whether those emails create more
+pipeline: the simulation gives AI-written emails no advantage, and in the live eval only one of the two cases where
+personalisation was possible was personalised ([AI.md](AI.md#latest-live-run-2026-10-07)).
 
 Optional: a small holdout of eligible accounts that nobody contacts would show how much pipeline arrives with no outreach at
 all, which is what makes the lift incremental rather than merely larger.
