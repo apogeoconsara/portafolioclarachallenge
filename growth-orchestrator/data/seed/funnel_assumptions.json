@@ -1,0 +1,92 @@
+{
+  "status": "ASSUMPTIONS - illustrative, to be replaced with Clara's measured baseline",
+  "unit": "targeted account (cluster = email domain, so duplicate accounts share an arm)",
+  "arms": {
+    "control": "current process: SDRs research, write and send by hand; capacity-limited coverage",
+    "treatment": "orchestrator: rules decide eligibility, AI interprets replies / drafts grounded copy, humans handle escalations"
+  },
+  "control": {
+    "coverage_of_eligible": 0.3,
+    "p_delivered": 0.965,
+    "p_reply": 0.04,
+    "p_positive_given_reply": 0.35,
+    "p_sql_given_positive": 0.45,
+    "p_opp_given_sql": 0.5,
+    "p_unsubscribe": 0.004,
+    "p_complaint": 0.0008,
+    "p_hard_bounce": 0.025,
+    "policy_violation_rate_on_ineligible": 0.03,
+    "median_hours_to_first_touch": 96.0,
+    "sdr_minutes_per_contacted_account": 18.0
+  },
+  "treatment": {
+    "coverage_of_eligible": 0.97,
+    "p_delivered": 0.975,
+    "p_reply": 0.034,
+    "p_positive_given_reply": 0.35,
+    "p_sql_given_positive": 0.4,
+    "p_opp_given_sql": 0.5,
+    "p_unsubscribe": 0.004,
+    "p_complaint": 0.0008,
+    "p_hard_bounce": 0.012,
+    "policy_violation_rate_on_ineligible": 0.0,
+    "median_hours_to_first_touch": 2.0,
+    "sdr_minutes_per_contacted_account": 1.5
+  },
+  "pipeline_usd_by_band": {
+    "11-50": [
+      9000,
+      0.8
+    ],
+    "51-200": [
+      18000,
+      0.8
+    ],
+    "201-500": [
+      32000,
+      0.8
+    ],
+    "501-1000": [
+      55000,
+      0.8
+    ],
+    "1000+": [
+      90000,
+      0.9
+    ]
+  },
+  "unit_economics_usd": {
+    "sdr_cost_per_hour": 22.0,
+    "llm_cost_per_account": 0.004,
+    "enrichment_cost_per_account": 0.05,
+    "email_cost_per_send": 0.001
+  },
+  "primary_metric": "qualified_pipeline_usd_per_1000_targeted_accounts (SQL-accepted pipeline created within 60 days)",
+  "secondary_metrics": [
+    "sql_per_1000_targeted",
+    "reply_rate_per_contacted",
+    "positive_reply_rate",
+    "cost_per_sql",
+    "median_hours_to_first_touch",
+    "sdr_hours_per_sql"
+  ],
+  "guardrails": {
+    "unsubscribe_rate_max": 0.006,
+    "spam_complaint_rate_max": 0.001,
+    "hard_bounce_rate_max": 0.03,
+    "ae_sql_acceptance_rate_min_vs_control": 0.95,
+    "policy_violations": "must be 0 in treatment",
+    "ai_unsafe_action_rate": "must be 0; any unsafe action pauses autonomy"
+  },
+  "design": {
+    "randomization": "stratified by country x employee band x prior-touch flag, ranked by hash within stratum, alternating",
+    "allocation": "50/50",
+    "duration_weeks": 8,
+    "analysis": "intention-to-treat on all targeted accounts",
+    "attribution_window_days": 60,
+    "contamination_control": "assignment by domain cluster; AEs see no arm labels",
+    "novelty_check": "compare weeks 1-2 vs 5-8",
+    "pre_registered": true,
+    "stop_rules": "stop treatment on any guardrail breach in two consecutive weeks"
+  }
+}

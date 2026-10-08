@@ -1,0 +1,48 @@
+{
+  "note": "ASSUMPTIONS. Illustrative weights and thresholds, not Clara's real ICP. Read by orchestrator/scoring.py; editable live on the Scoring tab.",
+  "active_version": "v1",
+  "versions": [
+    {
+      "id": "v1",
+      "name": "Initial assumptions",
+      "date": "2026-10-06",
+      "dataset": "synthetic-50k-seed42",
+      "weights": {
+        "size": 30,
+        "pain": 25,
+        "signal_each": 15,
+        "tier_a": 75,
+        "tier_b": 50
+      },
+      "note": "First draft of the weights, before any review.",
+      "status": "active"
+    },
+    {
+      "id": "v2",
+      "name": "Example proposal: size and pain weigh more",
+      "date": "2026-10-07",
+      "dataset": "synthetic-50k-seed42",
+      "weights": {
+        "size": 40,
+        "pain": 30,
+        "signal_each": 10,
+        "tier_a": 75,
+        "tier_b": 50
+      },
+      "status": "proposed",
+      "note": "Illustrative proposal to show the comparison and the change log. Not adopted: the engine still uses the active version."
+    }
+  ],
+  "gate_enabled": true,
+  "signal_cap": 3,
+  "size_sweet_spot": [
+    51,
+    null
+  ],
+  "size_edge_fraction": 0.5,
+  "signal_fact_types": [
+    "expansion",
+    "hiring",
+    "funding"
+  ]
+}

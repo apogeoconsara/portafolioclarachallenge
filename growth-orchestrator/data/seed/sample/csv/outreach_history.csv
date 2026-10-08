@@ -1,0 +1,435 @@
+﻿touch_id,account_id,contact_id,thread_id,channel,step,sender_type,sent_at,subject,status
+tch_000002_1,acc_000002,con_000002_1,thr_tch_000002_1,email,1,sequence,2026-08-12T18:25:00Z,Expense control without reimbursements,delivered
+tch_000007_1,acc_000007,con_000007_1,thr_tch_000007_1,email,3,sequence,2026-09-24T06:43:00Z,How does Culo Farms handle travel expenses?,opened
+tch_000007_2,acc_000007,con_000007_1,thr_tch_000007_2,email,2,sequence,2026-09-16T03:10:00Z,Corporate cards for your team,delivered
+tch_000007_3,acc_000007,con_000007_1,thr_tch_000007_3,email,1,sequence,2026-09-09T09:53:00Z,Expense control without reimbursements,opened
+tch_000008_1,acc_000008,con_000008_1,thr_tch_000008_1,email,2,sequence,2026-07-03T07:40:00Z,Spend management for Group Bavi,delivered
+tch_000008_2,acc_000008,con_000008_1,thr_tch_000008_2,email,1,sequence,2026-06-16T08:51:00Z,Spend management for Group Bavi,delivered
+tch_000013_1,acc_000013,con_000013_5,thr_tch_000013_1,email,4,sequence,2026-08-18T05:39:00Z,Corporate cards for your team,delivered
+tch_000013_2,acc_000013,con_000013_5,thr_tch_000013_2,email,3,sequence,2026-08-02T00:00:00Z,Expense control without reimbursements,opened
+tch_000013_3,acc_000013,con_000013_5,thr_tch_000013_3,email,2,sequence,2026-07-15T12:49:00Z,Spend management for Yralo Health,opened
+tch_000013_4,acc_000013,con_000013_5,thr_tch_000013_4,email,1,sequence,2026-07-07T22:56:00Z,Corporate cards for your team,delivered
+tch_000014_1,acc_000014,con_000014_3,thr_tch_000014_1,email,1,sequence,2026-09-26T15:51:00Z,How does Group Nimo handle travel expenses?,delivered
+tch_000016_1,acc_000016,con_000016_3,thr_tch_000016_1,email,1,ae,2026-07-31T19:47:00Z,Spend management for Alvi,delivered
+tch_000017_1,acc_000017,con_000017_1,thr_tch_000017_1,email,1,ae,2026-08-04T03:33:00Z,How does Group Trayra handle travel expenses?,delivered
+tch_000023_1,acc_000023,con_000023_4,thr_tch_000023_1,email,1,sequence,2026-07-20T22:20:00Z,Spend management for Group Galdor,delivered
+tch_000025_1,acc_000025,con_000025_1,thr_tch_000025_1,email,1,sequence,2026-05-01T00:09:00Z,Spend management for Group Jota,delivered
+tch_000026_1,acc_000026,con_000026_4,thr_tch_000026_1,email,4,sequence,2026-08-19T04:34:00Z,Spend management for Minne Clinic,delivered
+tch_000026_2,acc_000026,con_000026_4,thr_tch_000026_2,email,4,sequence,2026-08-09T23:43:00Z,Corporate cards for your team,delivered
+tch_000026_3,acc_000026,con_000026_4,thr_tch_000026_3,email,3,sequence,2026-08-03T04:50:00Z,Expense control without reimbursements,delivered
+tch_000026_4,acc_000026,con_000026_4,thr_tch_000026_4,email,2,sequence,2026-07-15T02:06:00Z,How does Minne Clinic handle travel expenses?,opened
+tch_000026_5,acc_000026,con_000026_4,thr_tch_000026_5,email,1,sequence,2026-07-05T06:36:00Z,Expense control without reimbursements,delivered
+tch_000027_1,acc_000027,con_000027_2,thr_tch_000027_1,email,1,sequence,2026-06-29T02:15:00Z,Spend management for Group Riren,opened
+tch_000029_1,acc_000029,con_000029_3,thr_tch_000029_1,email,1,sequence,2026-04-03T08:00:00Z,How does Agro Lunex handle travel expenses?,delivered
+tch_000031_1,acc_000031,con_000031_1,thr_tch_000031_1,email,2,sequence,2026-09-23T18:35:00Z,Expense control without reimbursements,delivered
+tch_000031_2,acc_000031,con_000031_1,thr_tch_000031_2,email,1,sequence,2026-09-14T05:48:00Z,Spend management for Group Solmin,opened
+tch_000032_1,acc_000032,con_000032_3,thr_tch_000032_1,email,1,sequence,2026-07-04T21:00:00Z,Expense control without reimbursements,delivered
+tch_000033_1,acc_000033,con_000033_1,thr_tch_000033_1,email,2,sequence,2026-09-21T19:57:00Z,Spend management for Marcen Services,delivered
+tch_000033_2,acc_000033,con_000033_1,thr_tch_000033_2,email,1,sequence,2026-09-12T19:36:00Z,Expense control without reimbursements,delivered
+tch_000036_1,acc_000036,con_000036_1,thr_tch_000036_1,email,1,sequence,2026-05-12T03:20:00Z,Expense control without reimbursements,opened
+tch_000040_1,acc_000040,con_000040_2,thr_tch_000040_1,email,3,sequence,2026-09-19T05:45:00Z,How does Plastics Yraren handle travel expenses?,opened
+tch_000040_2,acc_000040,con_000040_2,thr_tch_000040_2,email,2,sequence,2026-09-09T14:12:00Z,How does Plastics Yraren handle travel expenses?,opened
+tch_000040_3,acc_000040,con_000040_2,thr_tch_000040_3,email,1,sequence,2026-09-03T06:20:00Z,Corporate cards for your team,delivered
+tch_000041_1,acc_000041,con_000041_1,thr_tch_000041_1,email,4,sequence,2026-07-21T18:39:00Z,Corporate cards for your team,opened
+tch_000041_2,acc_000041,con_000041_1,thr_tch_000041_2,email,3,sequence,2026-07-09T23:17:00Z,Spend management for Roro,opened
+tch_000041_3,acc_000041,con_000041_1,thr_tch_000041_3,email,2,sequence,2026-06-21T14:02:00Z,Expense control without reimbursements,opened
+tch_000041_4,acc_000041,con_000041_1,thr_tch_000041_4,email,1,sequence,2026-06-13T17:43:00Z,Corporate cards for your team,delivered
+tch_000042_1,acc_000042,con_000042_1,thr_tch_000042_1,email,2,sequence,2026-09-17T18:03:00Z,How does Doni handle travel expenses?,opened
+tch_000042_2,acc_000042,con_000042_1,thr_tch_000042_2,email,1,sequence,2026-09-06T23:39:00Z,Corporate cards for your team,delivered
+tch_000046_1,acc_000046,con_000046_3,thr_tch_000046_1,email,1,sequence,2026-09-23T11:05:00Z,Spend management for Neper,delivered
+tch_000048_1,acc_000048,con_000048_1,thr_tch_000048_1,email,4,sequence,2026-09-01T11:44:00Z,Corporate cards for your team,opened
+tch_000048_2,acc_000048,con_000048_1,thr_tch_000048_2,email,4,sequence,2026-08-23T13:54:00Z,How does Luper handle travel expenses?,opened
+tch_000048_3,acc_000048,con_000048_1,thr_tch_000048_3,email,3,sequence,2026-08-04T07:40:00Z,Spend management for Luper,delivered
+tch_000048_4,acc_000048,con_000048_1,thr_tch_000048_4,email,2,sequence,2026-07-17T04:09:00Z,How does Luper handle travel expenses?,delivered
+tch_000048_5,acc_000048,con_000048_1,thr_tch_000048_5,email,1,sequence,2026-06-27T19:13:00Z,How does Luper handle travel expenses?,delivered
+tch_000050_1,acc_000050,con_000050_1,thr_tch_000050_1,email,1,sequence,2026-04-25T10:49:00Z,Expense control without reimbursements,delivered
+tch_000051_1,acc_000051,con_000051_4,thr_tch_000051_1,email,1,ae,2026-06-09T01:26:00Z,Spend management for Belpi Systems,opened
+tch_000053_1,acc_000053,con_000053_1,thr_tch_000053_1,email,1,sequence,2026-09-23T07:48:00Z,Spend management for Ixar,opened
+tch_000054_1,acc_000054,con_000054_1,thr_tch_000054_1,email,1,ae,2026-06-02T11:12:00Z,Corporate cards for your team,delivered
+tch_000055_1,acc_000055,con_000055_3,thr_tch_000055_1,email,1,ae,2026-08-09T10:20:00Z,Expense control without reimbursements,delivered
+tch_000056_1,acc_000056,con_000056_2,thr_tch_000056_1,email,2,sequence,2026-09-20T02:41:00Z,Corporate cards for your team,delivered
+tch_000056_2,acc_000056,con_000056_2,thr_tch_000056_2,email,1,sequence,2026-09-07T19:01:00Z,Expense control without reimbursements,opened
+tch_000058_1,acc_000058,con_000058_1,thr_tch_000058_1,email,1,ae,2026-08-06T17:17:00Z,Expense control without reimbursements,delivered
+tch_000062_1,acc_000062,con_000062_1,thr_tch_000062_1,email,1,sequence,2026-07-22T14:20:00Z,Corporate cards for your team,opened
+tch_000064_1,acc_000064,con_000064_1,thr_tch_000064_1,email,4,sequence,2026-06-25T00:24:00Z,Spend management for Pertor,delivered
+tch_000064_2,acc_000064,con_000064_1,thr_tch_000064_2,email,4,sequence,2026-06-11T05:09:00Z,Spend management for Pertor,opened
+tch_000064_3,acc_000064,con_000064_1,thr_tch_000064_3,email,3,sequence,2026-05-24T08:09:00Z,How does Pertor handle travel expenses?,delivered
+tch_000064_4,acc_000064,con_000064_1,thr_tch_000064_4,email,2,sequence,2026-05-09T01:59:00Z,How does Pertor handle travel expenses?,delivered
+tch_000064_5,acc_000064,con_000064_1,thr_tch_000064_5,email,1,sequence,2026-04-28T13:13:00Z,Corporate cards for your team,delivered
+tch_000066_1,acc_000066,con_000066_1,thr_tch_000066_1,email,2,sequence,2026-09-27T21:28:00Z,Expense control without reimbursements,opened
+tch_000066_2,acc_000066,con_000066_1,thr_tch_000066_2,email,1,sequence,2026-09-15T21:17:00Z,How does Builders Maem handle travel expenses?,delivered
+tch_000068_1,acc_000068,con_000068_2,thr_tch_000068_1,email,3,sequence,2026-09-29T06:52:00Z,Spend management for Kamo,delivered
+tch_000068_2,acc_000068,con_000068_2,thr_tch_000068_2,email,2,sequence,2026-09-18T16:43:00Z,How does Kamo handle travel expenses?,opened
+tch_000068_3,acc_000068,con_000068_2,thr_tch_000068_3,email,1,sequence,2026-09-08T19:35:00Z,Corporate cards for your team,delivered
+tch_000080_1,acc_000080,con_000080_1,thr_tch_000080_1,email,1,sequence,2026-08-08T02:40:00Z,Expense control without reimbursements,delivered
+tch_000086_1,acc_000086,con_000086_1,thr_tch_000086_1,email,2,sequence,2026-08-22T05:22:00Z,Expense control without reimbursements,opened
+tch_000086_2,acc_000086,con_000086_1,thr_tch_000086_2,email,1,sequence,2026-08-05T13:53:00Z,Spend management for Cuzu,opened
+tch_000089_1,acc_000089,con_000089_1,thr_tch_000089_1,email,1,sequence,2026-04-27T10:12:00Z,How does Trafer Builders handle travel expenses?,delivered
+tch_000092_1,acc_000092,con_000092_2,thr_tch_000092_1,email,1,sequence,2026-03-31T08:56:00Z,Spend management for Risa Retail,delivered
+tch_000093_1,acc_000093,con_000093_1,thr_tch_000093_1,email,2,sequence,2026-09-29T13:52:00Z,Spend management for Pangal,opened
+tch_000093_2,acc_000093,con_000093_1,thr_tch_000093_2,email,1,sequence,2026-09-23T05:07:00Z,Expense control without reimbursements,delivered
+tch_000094_1,acc_000094,con_000094_1,thr_tch_000094_1,email,3,sequence,2026-07-28T13:11:00Z,Expense control without reimbursements,delivered
+tch_000094_2,acc_000094,con_000094_1,thr_tch_000094_2,email,2,sequence,2026-07-11T18:35:00Z,Spend management for Group Arix,delivered
+tch_000094_3,acc_000094,con_000094_1,thr_tch_000094_3,email,1,sequence,2026-06-25T08:00:00Z,Expense control without reimbursements,opened
+tch_000096_1,acc_000096,con_000096_1,thr_tch_000096_1,email,2,sequence,2026-08-25T21:11:00Z,Corporate cards for your team,opened
+tch_000096_2,acc_000096,con_000096_1,thr_tch_000096_2,email,1,sequence,2026-08-13T03:22:00Z,Spend management for Vimin Clinic,delivered
+tch_000098_1,acc_000098,con_000098_1,thr_tch_000098_1,email,3,sequence,2026-08-23T15:50:00Z,Spend management for Bacen,delivered
+tch_000098_2,acc_000098,con_000098_1,thr_tch_000098_2,email,2,sequence,2026-08-14T14:23:00Z,How does Bacen handle travel expenses?,delivered
+tch_000098_3,acc_000098,con_000098_1,thr_tch_000098_3,email,1,sequence,2026-07-14T09:15:00Z,Corporate cards for your team,delivered
+tch_000099_1,acc_000099,con_000099_1,thr_tch_000099_1,email,1,sequence,2026-09-25T03:24:00Z,Corporate cards for your team,opened
+tch_000102_1,acc_000102,con_000102_1,thr_tch_000102_1,email,2,sequence,2026-07-03T01:41:00Z,Corporate cards for your team,opened
+tch_000102_2,acc_000102,con_000102_1,thr_tch_000102_2,email,1,sequence,2026-06-20T19:48:00Z,How does Luqui Retail handle travel expenses?,delivered
+tch_000104_1,acc_000104,con_000104_2,thr_tch_000104_1,email,1,sequence,2026-09-18T06:13:00Z,How does Group Luren handle travel expenses?,opened
+tch_000108_1,acc_000108,con_000108_2,thr_tch_000108_1,email,2,sequence,2026-09-24T09:41:00Z,Spend management for Tenem Petrochemicals,delivered
+tch_000108_2,acc_000108,con_000108_2,thr_tch_000108_2,email,1,sequence,2026-09-13T05:03:00Z,How does Tenem Petrochemicals handle travel expenses?,delivered
+tch_000109_1,acc_000109,con_000109_2,thr_tch_000109_1,email,1,sequence,2026-05-24T22:32:00Z,How does Mercantile Arlo handle travel expenses?,opened
+tch_000111_1,acc_000111,con_000111_1,thr_tch_000111_1,email,1,sequence,2026-05-07T05:16:00Z,Corporate cards for your team,delivered
+tch_000116_1,acc_000116,con_000116_1,thr_tch_000116_1,email,1,sequence,2026-08-14T23:49:00Z,Expense control without reimbursements,opened
+tch_000119_1,acc_000119,con_000119_1,thr_tch_000119_1,email,1,sequence,2026-08-13T22:27:00Z,Expense control without reimbursements,opened
+tch_000120_1,acc_000120,con_000120_2,thr_tch_000120_1,email,2,sequence,2026-09-21T21:47:00Z,Corporate cards for your team,delivered
+tch_000120_2,acc_000120,con_000120_2,thr_tch_000120_2,email,1,sequence,2026-09-15T14:20:00Z,How does Health Orul handle travel expenses?,opened
+tch_000121_1,acc_000121,con_000121_3,thr_tch_000121_1,email,1,ae,2026-06-26T16:15:00Z,How does Perlis handle travel expenses?,opened
+tch_000122_1,acc_000122,con_000122_1,thr_tch_000122_1,email,2,sequence,2026-06-11T01:29:00Z,How does Sagal Farms handle travel expenses?,opened
+tch_000122_2,acc_000122,con_000122_1,thr_tch_000122_2,email,1,sequence,2026-05-28T04:24:00Z,How does Sagal Farms handle travel expenses?,opened
+tch_000123_1,acc_000123,con_000123_1,thr_tch_000123_1,email,1,sequence,2026-04-30T19:55:00Z,Corporate cards for your team,delivered
+tch_000127_1,acc_000127,con_000127_1,thr_tch_000127_1,email,2,sequence,2026-06-17T04:33:00Z,Expense control without reimbursements,delivered
+tch_000127_2,acc_000127,con_000127_1,thr_tch_000127_2,email,1,sequence,2026-06-05T04:27:00Z,Spend management for Baver,delivered
+tch_000129_1,acc_000129,con_000129_2,thr_tch_000129_1,email,1,sequence,2026-09-29T19:10:00Z,Corporate cards for your team,delivered
+tch_000133_1,acc_000133,con_000133_1,thr_tch_000133_1,email,2,sequence,2026-09-23T01:36:00Z,Spend management for Tato,opened
+tch_000133_2,acc_000133,con_000133_1,thr_tch_000133_2,email,1,sequence,2026-09-14T21:23:00Z,How does Tato handle travel expenses?,opened
+tch_000134_1,acc_000134,con_000134_1,thr_tch_000134_1,email,2,cs,2026-09-28T12:42:00Z,Expense control without reimbursements,opened
+tch_000137_1,acc_000137,con_000137_1,thr_tch_000137_1,email,2,sequence,2026-09-25T10:24:00Z,Expense control without reimbursements,delivered
+tch_000137_2,acc_000137,con_000137_1,thr_tch_000137_2,email,1,sequence,2026-09-16T20:14:00Z,Expense control without reimbursements,delivered
+tch_000139_1,acc_000139,con_000139_4,thr_tch_000139_1,email,2,sequence,2026-08-03T17:50:00Z,Spend management for Group Lumin,delivered
+tch_000139_2,acc_000139,con_000139_4,thr_tch_000139_2,email,1,sequence,2026-07-21T23:38:00Z,How does Group Lumin handle travel expenses?,delivered
+tch_000142_1,acc_000142,con_000142_1,thr_tch_000142_1,email,1,sequence,2026-09-26T22:09:00Z,Expense control without reimbursements,opened
+tch_000145_1,acc_000145,con_000145_2,thr_tch_000145_1,email,2,sequence,2026-09-22T22:50:00Z,How does Group Marem handle travel expenses?,opened
+tch_000145_2,acc_000145,con_000145_2,thr_tch_000145_2,email,1,sequence,2026-09-18T09:53:00Z,How does Group Marem handle travel expenses?,delivered
+tch_000147_1,acc_000147,con_000147_1,thr_tch_000147_1,email,1,sequence,2026-06-02T12:34:00Z,Corporate cards for your team,opened
+tch_000149_1,acc_000149,con_000149_1,thr_tch_000149_1,email,4,sequence,2026-08-10T06:50:00Z,How does Bellis handle travel expenses?,delivered
+tch_000149_2,acc_000149,con_000149_1,thr_tch_000149_2,email,3,sequence,2026-07-21T16:08:00Z,Spend management for Bellis,delivered
+tch_000149_3,acc_000149,con_000149_1,thr_tch_000149_3,email,2,sequence,2026-07-05T09:01:00Z,Expense control without reimbursements,delivered
+tch_000149_4,acc_000149,con_000149_1,thr_tch_000149_4,email,1,sequence,2026-06-23T20:03:00Z,Spend management for Bellis,opened
+tch_000150_1,acc_000150,con_000150_1,thr_tch_000150_1,email,3,sequence,2026-07-15T05:14:00Z,Corporate cards for your team,opened
+tch_000150_2,acc_000150,con_000150_1,thr_tch_000150_2,email,2,sequence,2026-06-24T23:41:00Z,Spend management for Institute Negi,opened
+tch_000150_3,acc_000150,con_000150_1,thr_tch_000150_3,email,1,sequence,2026-06-05T04:50:00Z,Expense control without reimbursements,delivered
+tch_000151_1,acc_000151,con_000151_2,thr_tch_000151_1,email,1,sequence,2026-07-07T08:12:00Z,How does Health Gici handle travel expenses?,opened
+tch_000152_1,acc_000152,con_000152_3,thr_tch_000152_1,email,1,sequence,2026-08-23T23:32:00Z,How does Pivi handle travel expenses?,opened
+tch_000153_1,acc_000153,con_000153_1,thr_tch_000153_1,email,3,sequence,2026-09-24T17:32:00Z,How does Group Joqui handle travel expenses?,delivered
+tch_000153_2,acc_000153,con_000153_1,thr_tch_000153_2,email,2,sequence,2026-09-20T03:34:00Z,Corporate cards for your team,opened
+tch_000153_3,acc_000153,con_000153_1,thr_tch_000153_3,email,1,sequence,2026-09-14T13:26:00Z,Corporate cards for your team,delivered
+tch_000154_1,acc_000154,con_000154_3,thr_tch_000154_1,email,2,sequence,2026-09-28T01:30:00Z,How does Foods Empan handle travel expenses?,delivered
+tch_000154_2,acc_000154,con_000154_3,thr_tch_000154_2,email,1,sequence,2026-09-18T08:52:00Z,How does Foods Empan handle travel expenses?,opened
+tch_000155_1,acc_000155,con_000155_1,thr_tch_000155_1,email,1,sequence,2026-08-21T10:38:00Z,Expense control without reimbursements,delivered
+tch_000156_1,acc_000156,con_000156_1,thr_tch_000156_1,email,2,sequence,2026-07-03T18:49:00Z,Spend management for Arnex,delivered
+tch_000156_2,acc_000156,con_000156_1,thr_tch_000156_2,email,1,sequence,2026-06-25T18:16:00Z,How does Arnex handle travel expenses?,delivered
+tch_000158_1,acc_000158,con_000158_2,thr_tch_000158_1,email,1,sequence,2026-07-15T15:10:00Z,How does Institute Yrapan handle travel expenses?,delivered
+tch_000159_1,acc_000159,con_000159_1,thr_tch_000159_1,email,1,sequence,2026-05-29T01:38:00Z,Expense control without reimbursements,delivered
+tch_000160_1,acc_000160,con_000160_1,thr_tch_000160_1,email,4,sequence,2026-09-04T14:54:00Z,Spend management for Gourmet Zumin,opened
+tch_000160_2,acc_000160,con_000160_1,thr_tch_000160_2,email,3,sequence,2026-08-16T11:38:00Z,Corporate cards for your team,delivered
+tch_000160_3,acc_000160,con_000160_1,thr_tch_000160_3,email,2,sequence,2026-08-08T02:52:00Z,Corporate cards for your team,delivered
+tch_000160_4,acc_000160,con_000160_1,thr_tch_000160_4,email,1,sequence,2026-07-22T12:07:00Z,Spend management for Gourmet Zumin,opened
+tch_000162_1,acc_000162,con_000162_1,thr_tch_000162_1,email,2,sequence,2026-09-19T18:51:00Z,Spend management for Health Mincen,delivered
+tch_000162_2,acc_000162,con_000162_1,thr_tch_000162_2,email,1,sequence,2026-09-09T08:22:00Z,How does Health Mincen handle travel expenses?,delivered
+tch_000163_1,acc_000163,con_000163_1,thr_tch_000163_1,email,1,sequence,2026-09-26T08:15:00Z,Corporate cards for your team,opened
+tch_000166_1,acc_000166,con_000166_4,thr_tch_000166_1,email,1,ae,2026-03-26T17:15:00Z,Spend management for Perbel,delivered
+tch_000169_1,acc_000169,con_000169_1,thr_tch_000169_1,email,1,sequence,2026-09-29T14:07:00Z,How does Group Belor handle travel expenses?,delivered
+tch_000171_1,acc_000171,con_000171_1,thr_tch_000171_1,email,1,sequence,2026-06-09T05:01:00Z,Spend management for Saba Studio,delivered
+tch_000173_1,acc_000173,con_000173_2,thr_tch_000173_1,email,1,ae,2026-04-19T22:11:00Z,How does Freight Mama handle travel expenses?,delivered
+tch_000177_1,acc_000177,con_000177_3,thr_tch_000177_1,email,2,sequence,2026-07-03T15:54:00Z,Expense control without reimbursements,delivered
+tch_000177_2,acc_000177,con_000177_3,thr_tch_000177_2,email,1,sequence,2026-06-26T13:55:00Z,Expense control without reimbursements,delivered
+tch_000180_1,acc_000180,con_000180_1,thr_tch_000180_1,email,1,ae,2026-04-21T12:06:00Z,How does Traar Builders handle travel expenses?,delivered
+tch_000187_1,acc_000187,con_000187_2,thr_tch_000187_1,email,2,sequence,2026-08-09T20:31:00Z,Spend management for Locu,delivered
+tch_000187_2,acc_000187,con_000187_2,thr_tch_000187_2,email,1,sequence,2026-07-30T21:01:00Z,Expense control without reimbursements,delivered
+tch_000188_1,acc_000188,con_000188_1,thr_tch_000188_1,email,3,sequence,2026-09-29T19:24:00Z,Corporate cards for your team,delivered
+tch_000188_2,acc_000188,con_000188_1,thr_tch_000188_2,email,2,sequence,2026-09-19T13:55:00Z,Expense control without reimbursements,delivered
+tch_000188_3,acc_000188,con_000188_1,thr_tch_000188_3,email,1,sequence,2026-09-10T23:52:00Z,Corporate cards for your team,opened
+tch_000189_1,acc_000189,con_000189_1,thr_tch_000189_1,email,4,sequence,2026-07-24T23:25:00Z,How does Galva Studio handle travel expenses?,opened
+tch_000189_2,acc_000189,con_000189_1,thr_tch_000189_2,email,3,sequence,2026-07-06T07:26:00Z,Corporate cards for your team,delivered
+tch_000189_3,acc_000189,con_000189_1,thr_tch_000189_3,email,2,sequence,2026-06-22T14:31:00Z,How does Galva Studio handle travel expenses?,delivered
+tch_000189_4,acc_000189,con_000189_1,thr_tch_000189_4,email,1,sequence,2026-06-12T16:59:00Z,Expense control without reimbursements,delivered
+tch_000193_1,acc_000193,con_000193_1,thr_tch_000193_1,email,4,sequence,2026-06-29T23:53:00Z,Spend management for Group Emal,delivered
+tch_000193_2,acc_000193,con_000193_1,thr_tch_000193_2,email,4,sequence,2026-06-16T02:21:00Z,Spend management for Group Emal,delivered
+tch_000193_3,acc_000193,con_000193_1,thr_tch_000193_3,email,3,sequence,2026-06-04T15:53:00Z,Corporate cards for your team,delivered
+tch_000193_4,acc_000193,con_000193_1,thr_tch_000193_4,email,2,sequence,2026-05-23T20:21:00Z,Spend management for Group Emal,opened
+tch_000193_5,acc_000193,con_000193_1,thr_tch_000193_5,email,1,sequence,2026-05-09T17:50:00Z,Spend management for Group Emal,opened
+tch_000194_1,acc_000194,con_000194_2,thr_tch_000194_1,email,3,sequence,2026-07-16T16:08:00Z,Spend management for Group Torjo,delivered
+tch_000194_2,acc_000194,con_000194_2,thr_tch_000194_2,email,2,sequence,2026-06-27T03:46:00Z,Expense control without reimbursements,delivered
+tch_000194_3,acc_000194,con_000194_2,thr_tch_000194_3,email,1,sequence,2026-06-09T07:57:00Z,How does Group Torjo handle travel expenses?,delivered
+tch_000195_1,acc_000195,con_000195_1,thr_tch_000195_1,email,3,sequence,2026-09-27T00:45:00Z,Spend management for Group Mabel,opened
+tch_000195_2,acc_000195,con_000195_1,thr_tch_000195_2,email,2,sequence,2026-09-17T21:29:00Z,Expense control without reimbursements,delivered
+tch_000195_3,acc_000195,con_000195_1,thr_tch_000195_3,email,1,sequence,2026-09-06T22:07:00Z,Expense control without reimbursements,delivered
+tch_000197_1,acc_000197,con_000197_1,thr_tch_000197_1,email,3,sequence,2026-09-28T00:48:00Z,How does Torlo Travel handle travel expenses?,delivered
+tch_000197_2,acc_000197,con_000197_1,thr_tch_000197_2,email,2,sequence,2026-09-19T14:10:00Z,Expense control without reimbursements,delivered
+tch_000197_3,acc_000197,con_000197_1,thr_tch_000197_3,email,1,sequence,2026-09-12T15:08:00Z,How does Torlo Travel handle travel expenses?,delivered
+tch_000198_1,acc_000198,con_000198_5,thr_tch_000198_1,email,3,sequence,2026-09-27T23:03:00Z,Spend management for Manufacturing Cuul,delivered
+tch_000198_2,acc_000198,con_000198_5,thr_tch_000198_2,email,2,sequence,2026-09-17T22:17:00Z,Corporate cards for your team,opened
+tch_000198_3,acc_000198,con_000198_5,thr_tch_000198_3,email,1,sequence,2026-09-10T23:02:00Z,Expense control without reimbursements,delivered
+tch_000200_1,acc_000200,con_000200_3,thr_tch_000200_1,email,3,sequence,2026-09-25T01:46:00Z,Spend management for Quiqui,delivered
+tch_000200_2,acc_000200,con_000200_3,thr_tch_000200_2,email,2,sequence,2026-09-16T06:06:00Z,Expense control without reimbursements,delivered
+tch_000200_3,acc_000200,con_000200_3,thr_tch_000200_3,email,1,sequence,2026-09-08T04:56:00Z,Spend management for Quiqui,delivered
+tch_000203_1,acc_000203,con_000203_4,thr_tch_000203_1,email,4,sequence,2026-07-13T22:08:00Z,How does Academy Belci handle travel expenses?,delivered
+tch_000203_2,acc_000203,con_000203_4,thr_tch_000203_2,email,4,sequence,2026-07-01T03:09:00Z,How does Academy Belci handle travel expenses?,delivered
+tch_000203_3,acc_000203,con_000203_4,thr_tch_000203_3,email,3,sequence,2026-06-21T19:29:00Z,How does Academy Belci handle travel expenses?,delivered
+tch_000203_4,acc_000203,con_000203_4,thr_tch_000203_4,email,2,sequence,2026-06-02T23:54:00Z,How does Academy Belci handle travel expenses?,delivered
+tch_000203_5,acc_000203,con_000203_4,thr_tch_000203_5,email,1,sequence,2026-05-22T03:27:00Z,Corporate cards for your team,delivered
+tch_000205_1,acc_000205,con_000205_1,thr_tch_000205_1,email,2,sequence,2026-06-16T18:23:00Z,Corporate cards for your team,delivered
+tch_000205_2,acc_000205,con_000205_1,thr_tch_000205_2,email,1,sequence,2026-06-01T20:36:00Z,Corporate cards for your team,delivered
+tch_000206_1,acc_000206,con_000206_2,thr_tch_000206_1,email,4,sequence,2026-07-10T11:23:00Z,Expense control without reimbursements,delivered
+tch_000206_2,acc_000206,con_000206_2,thr_tch_000206_2,email,3,sequence,2026-06-23T11:28:00Z,Spend management for Group Altra,delivered
+tch_000206_3,acc_000206,con_000206_2,thr_tch_000206_3,email,2,sequence,2026-06-03T20:15:00Z,Corporate cards for your team,delivered
+tch_000206_4,acc_000206,con_000206_2,thr_tch_000206_4,email,1,sequence,2026-05-19T18:27:00Z,Spend management for Group Altra,opened
+tch_000207_1,acc_000207,con_000207_2,thr_tch_000207_1,email,1,sequence,2026-06-23T14:09:00Z,Corporate cards for your team,delivered
+tch_000208_1,acc_000208,con_000208_2,thr_tch_000208_1,email,2,ae,2026-09-07T15:57:00Z,Expense control without reimbursements,delivered
+tch_000210_1,acc_000210,con_000210_3,thr_tch_000210_1,email,1,ae,2026-05-24T23:42:00Z,Spend management for Group Kaba,opened
+tch_000212_1,acc_000212,con_000212_1,thr_tch_000212_1,email,3,sequence,2026-09-18T07:39:00Z,How does Emren handle travel expenses?,delivered
+tch_000212_2,acc_000212,con_000212_1,thr_tch_000212_2,email,2,sequence,2026-09-05T19:30:00Z,How does Emren handle travel expenses?,delivered
+tch_000212_3,acc_000212,con_000212_1,thr_tch_000212_3,email,1,sequence,2026-08-31T02:31:00Z,Expense control without reimbursements,delivered
+tch_000213_1,acc_000213,con_000213_2,thr_tch_000213_1,email,1,sequence,2026-06-28T06:40:00Z,Corporate cards for your team,delivered
+tch_000214_1,acc_000214,con_000214_2,thr_tch_000214_1,email,3,sequence,2026-09-21T14:47:00Z,Expense control without reimbursements,opened
+tch_000214_2,acc_000214,con_000214_2,thr_tch_000214_2,email,2,sequence,2026-09-12T20:29:00Z,Spend management for Quiem,opened
+tch_000214_3,acc_000214,con_000214_2,thr_tch_000214_3,email,1,sequence,2026-09-03T22:13:00Z,Expense control without reimbursements,opened
+tch_000215_1,acc_000215,con_000215_3,thr_tch_000215_1,email,1,sequence,2026-08-01T00:47:00Z,How does Farms Tenmar handle travel expenses?,opened
+tch_000216_1,acc_000216,con_000216_1,thr_tch_000216_1,email,1,ae,2026-09-06T22:16:00Z,How does Group Tato handle travel expenses?,opened
+tch_000217_1,acc_000217,con_000217_1,thr_tch_000217_1,email,1,ae,2026-07-29T08:31:00Z,Corporate cards for your team,delivered
+tch_000219_1,acc_000219,con_000219_1,thr_tch_000219_1,email,1,sequence,2026-07-06T08:22:00Z,How does Ciul handle travel expenses?,delivered
+tch_000222_1,acc_000222,con_000222_2,thr_tch_000222_1,email,4,sequence,2026-08-11T14:23:00Z,Spend management for Renva,delivered
+tch_000222_2,acc_000222,con_000222_2,thr_tch_000222_2,email,3,sequence,2026-07-22T14:07:00Z,Expense control without reimbursements,delivered
+tch_000222_3,acc_000222,con_000222_2,thr_tch_000222_3,email,2,sequence,2026-07-04T13:48:00Z,Corporate cards for your team,delivered
+tch_000222_4,acc_000222,con_000222_2,thr_tch_000222_4,email,1,sequence,2026-06-25T14:15:00Z,Expense control without reimbursements,delivered
+tch_000225_1,acc_000225,con_000225_2,thr_tch_000225_1,email,1,sequence,2026-09-27T00:52:00Z,How does Gourmet Cenal handle travel expenses?,delivered
+tch_000227_1,acc_000227,con_000227_1,thr_tch_000227_1,email,2,sequence,2026-08-09T16:56:00Z,Spend management for Marketing Quinex,delivered
+tch_000227_2,acc_000227,con_000227_1,thr_tch_000227_2,email,1,sequence,2026-07-31T02:59:00Z,How does Marketing Quinex handle travel expenses?,delivered
+tch_000228_1,acc_000228,con_000228_1,thr_tch_000228_1,email,2,sequence,2026-06-11T10:00:00Z,Spend management for Group Alor,opened
+tch_000228_2,acc_000228,con_000228_1,thr_tch_000228_2,email,1,sequence,2026-06-01T22:58:00Z,How does Group Alor handle travel expenses?,opened
+tch_000229_1,acc_000229,con_000229_1,thr_tch_000229_1,email,1,ae,2026-03-22T02:45:00Z,Spend management for Group Mapan,delivered
+tch_000231_1,acc_000231,con_000231_4,thr_tch_000231_1,email,1,sequence,2026-05-10T04:00:00Z,Corporate cards for your team,delivered
+tch_000232_1,acc_000232,con_000232_3,thr_tch_000232_1,email,3,sequence,2026-09-25T14:11:00Z,Corporate cards for your team,delivered
+tch_000232_2,acc_000232,con_000232_3,thr_tch_000232_2,email,2,sequence,2026-09-14T16:19:00Z,Corporate cards for your team,opened
+tch_000232_3,acc_000232,con_000232_3,thr_tch_000232_3,email,1,sequence,2026-09-09T09:14:00Z,Spend management for Zuper Freight,delivered
+tch_000233_1,acc_000233,con_000233_1,thr_tch_000233_1,email,2,sequence,2026-09-21T14:01:00Z,Spend management for Solci,delivered
+tch_000233_2,acc_000233,con_000233_1,thr_tch_000233_2,email,1,sequence,2026-09-11T23:50:00Z,Expense control without reimbursements,opened
+tch_000235_1,acc_000235,con_000235_1,thr_tch_000235_1,email,1,sequence,2026-04-29T19:28:00Z,Spend management for Momar Logistics,delivered
+tch_000238_1,acc_000238,con_000238_1,thr_tch_000238_1,email,2,sequence,2026-06-04T03:04:00Z,How does Industries Renfer handle travel expenses?,opened
+tch_000238_2,acc_000238,con_000238_1,thr_tch_000238_2,email,1,sequence,2026-05-20T20:57:00Z,Spend management for Industries Renfer,opened
+tch_000240_1,acc_000240,con_000240_1,thr_tch_000240_1,email,2,sequence,2026-06-25T02:11:00Z,Spend management for Dorka Beverages,delivered
+tch_000240_2,acc_000240,con_000240_1,thr_tch_000240_2,email,1,sequence,2026-06-10T16:10:00Z,How does Dorka Beverages handle travel expenses?,delivered
+tch_000243_1,acc_000243,con_000243_1,thr_tch_000243_1,email,1,sequence,2026-06-27T19:54:00Z,Spend management for Zual Industries,opened
+tch_000248_1,acc_000248,con_000248_2,thr_tch_000248_1,email,1,sequence,2026-08-24T02:21:00Z,How does Rivi handle travel expenses?,opened
+tch_000250_1,acc_000250,con_000250_2,thr_tch_000250_1,email,3,sequence,2026-09-19T12:12:00Z,How does Manufacturing Galmar handle travel expenses?,opened
+tch_000250_2,acc_000250,con_000250_2,thr_tch_000250_2,email,2,sequence,2026-09-13T17:55:00Z,How does Manufacturing Galmar handle travel expenses?,opened
+tch_000250_3,acc_000250,con_000250_2,thr_tch_000250_3,email,1,sequence,2026-09-08T05:12:00Z,How does Manufacturing Galmar handle travel expenses?,delivered
+tch_000252_1,acc_000252,con_000252_1,thr_tch_000252_1,email,1,sequence,2026-04-17T19:28:00Z,Expense control without reimbursements,opened
+tch_000253_1,acc_000253,con_000253_1,thr_tch_000253_1,email,1,ae,2026-06-26T04:45:00Z,Corporate cards for your team,delivered
+tch_000254_1,acc_000254,con_000254_1,thr_tch_000254_1,email,1,ae,2026-05-21T16:28:00Z,Expense control without reimbursements,opened
+tch_000256_1,acc_000256,con_000256_3,thr_tch_000256_1,email,2,sequence,2026-08-06T17:41:00Z,Spend management for Aldo Freight,delivered
+tch_000256_2,acc_000256,con_000256_3,thr_tch_000256_2,email,1,sequence,2026-07-27T12:05:00Z,Expense control without reimbursements,delivered
+tch_000257_1,acc_000257,con_000257_2,thr_tch_000257_1,email,2,sequence,2026-09-26T04:28:00Z,Corporate cards for your team,delivered
+tch_000257_2,acc_000257,con_000257_2,thr_tch_000257_2,email,1,sequence,2026-09-20T00:36:00Z,Corporate cards for your team,opened
+tch_000258_1,acc_000258,con_000258_2,thr_tch_000258_1,email,1,sequence,2026-09-18T17:58:00Z,How does Cajo handle travel expenses?,opened
+tch_000259_1,acc_000259,con_000259_2,thr_tch_000259_1,email,1,ae,2026-06-29T03:52:00Z,Corporate cards for your team,opened
+tch_000262_1,acc_000262,con_000262_1,thr_tch_000262_1,email,2,sequence,2026-07-04T21:29:00Z,Corporate cards for your team,opened
+tch_000262_2,acc_000262,con_000262_1,thr_tch_000262_2,email,1,sequence,2026-06-20T21:29:00Z,Expense control without reimbursements,delivered
+tch_000263_1,acc_000263,con_000263_2,thr_tch_000263_1,email,3,sequence,2026-07-31T12:17:00Z,How does Education Perma handle travel expenses?,delivered
+tch_000263_2,acc_000263,con_000263_2,thr_tch_000263_2,email,2,sequence,2026-07-21T18:31:00Z,Expense control without reimbursements,opened
+tch_000263_3,acc_000263,con_000263_2,thr_tch_000263_3,email,1,sequence,2026-07-03T15:03:00Z,Expense control without reimbursements,opened
+tch_000265_1,acc_000265,con_000265_1,thr_tch_000265_1,email,2,sequence,2026-09-28T10:16:00Z,How does Gourmet Pidor handle travel expenses?,delivered
+tch_000265_2,acc_000265,con_000265_1,thr_tch_000265_2,email,1,sequence,2026-09-17T13:39:00Z,Corporate cards for your team,opened
+tch_000268_1,acc_000268,con_000268_2,thr_tch_000268_1,email,1,sequence,2026-09-21T09:39:00Z,Corporate cards for your team,opened
+tch_000269_1,acc_000269,con_000269_1,thr_tch_000269_1,email,1,sequence,2026-07-30T09:57:00Z,How does Renlis handle travel expenses?,delivered
+tch_000271_1,acc_000271,con_000271_1,thr_tch_000271_1,email,1,sequence,2026-05-30T10:23:00Z,Spend management for Mocu Medical,opened
+tch_000272_1,acc_000272,con_000272_5,thr_tch_000272_1,email,1,sequence,2026-03-23T10:44:00Z,Corporate cards for your team,delivered
+tch_000273_1,acc_000273,con_000273_2,thr_tch_000273_1,email,3,sequence,2026-08-06T22:48:00Z,Spend management for Freight Cucu,opened
+tch_000273_2,acc_000273,con_000273_2,thr_tch_000273_2,email,2,sequence,2026-07-27T22:00:00Z,Expense control without reimbursements,delivered
+tch_000273_3,acc_000273,con_000273_2,thr_tch_000273_3,email,1,sequence,2026-07-15T03:36:00Z,How does Freight Cucu handle travel expenses?,delivered
+tch_000274_1,acc_000274,con_000274_1,thr_tch_000274_1,email,3,sequence,2026-08-09T03:23:00Z,Expense control without reimbursements,delivered
+tch_000274_2,acc_000274,con_000274_1,thr_tch_000274_2,email,2,sequence,2026-07-19T18:09:00Z,Expense control without reimbursements,delivered
+tch_000274_3,acc_000274,con_000274_1,thr_tch_000274_3,email,1,sequence,2026-07-16T05:34:00Z,Spend management for Fervi,delivered
+tch_000276_1,acc_000276,con_000276_1,thr_tch_000276_1,email,1,ae,2026-03-23T08:09:00Z,Corporate cards for your team,delivered
+tch_000278_1,acc_000278,con_000278_1,thr_tch_000278_1,email,1,ae,2026-04-22T14:57:00Z,How does Builders Vergal handle travel expenses?,delivered
+tch_000278_2,acc_000278,con_000278_1,thr_tch_000278_2,email,2,ae,2026-09-25T14:01:00Z,Expense control without reimbursements,delivered
+tch_000279_1,acc_000279,con_000279_1,thr_tch_000279_1,email,2,sequence,2026-08-15T18:43:00Z,Corporate cards for your team,delivered
+tch_000279_2,acc_000279,con_000279_1,thr_tch_000279_2,email,1,sequence,2026-07-29T05:13:00Z,Expense control without reimbursements,delivered
+tch_000280_1,acc_000280,con_000280_2,thr_tch_000280_1,email,2,sequence,2026-08-06T21:10:00Z,Corporate cards for your team,opened
+tch_000280_2,acc_000280,con_000280_2,thr_tch_000280_2,email,1,sequence,2026-07-31T02:05:00Z,Spend management for Vifo Realty,opened
+tch_000283_1,acc_000283,con_000283_2,thr_tch_000283_1,email,2,sequence,2026-09-23T17:31:00Z,Spend management for Panro,delivered
+tch_000283_2,acc_000283,con_000283_2,thr_tch_000283_2,email,1,sequence,2026-09-19T01:43:00Z,Expense control without reimbursements,opened
+tch_000284_1,acc_000284,con_000284_3,thr_tch_000284_1,email,2,sequence,2026-09-19T09:31:00Z,Spend management for Group Arsa,opened
+tch_000284_2,acc_000284,con_000284_3,thr_tch_000284_2,email,1,sequence,2026-09-11T18:29:00Z,Corporate cards for your team,opened
+tch_000285_1,acc_000285,con_000285_2,thr_tch_000285_1,email,1,sequence,2026-08-23T07:12:00Z,How does Group Panni handle travel expenses?,delivered
+tch_000288_1,acc_000288,con_000288_1,thr_tch_000288_1,email,1,sequence,2026-06-11T23:21:00Z,Corporate cards for your team,delivered
+tch_000292_1,acc_000292,con_000292_1,thr_tch_000292_1,email,2,sequence,2026-09-24T14:00:00Z,Expense control without reimbursements,delivered
+tch_000292_2,acc_000292,con_000292_1,thr_tch_000292_2,email,1,sequence,2026-09-17T04:18:00Z,Spend management for Cargo Panci,opened
+tch_000298_1,acc_000298,con_000298_1,thr_tch_000298_1,email,2,sequence,2026-06-18T17:01:00Z,Spend management for Clinic Perni,opened
+tch_000298_2,acc_000298,con_000298_1,thr_tch_000298_2,email,1,sequence,2026-06-07T05:43:00Z,Spend management for Clinic Perni,opened
+tch_000301_1,acc_000301,con_000301_4,thr_tch_000301_1,email,3,sequence,2026-08-01T20:59:00Z,Expense control without reimbursements,delivered
+tch_000301_2,acc_000301,con_000301_4,thr_tch_000301_2,email,2,sequence,2026-07-23T12:39:00Z,How does Group Giva handle travel expenses?,opened
+tch_000301_3,acc_000301,con_000301_4,thr_tch_000301_3,email,1,sequence,2026-07-09T13:10:00Z,Spend management for Group Giva,delivered
+tch_000305_1,acc_000305,con_000305_1,thr_tch_000305_1,email,1,ae,2026-07-12T08:35:00Z,Corporate cards for your team,delivered
+tch_000308_1,acc_000308,con_000308_1,thr_tch_000308_1,email,4,sequence,2026-08-14T12:26:00Z,Expense control without reimbursements,opened
+tch_000308_2,acc_000308,con_000308_1,thr_tch_000308_2,email,4,sequence,2026-07-26T18:09:00Z,Corporate cards for your team,delivered
+tch_000308_3,acc_000308,con_000308_1,thr_tch_000308_3,email,3,sequence,2026-07-20T15:53:00Z,How does Quisa handle travel expenses?,delivered
+tch_000308_4,acc_000308,con_000308_1,thr_tch_000308_4,email,2,sequence,2026-07-08T04:07:00Z,Corporate cards for your team,delivered
+tch_000308_5,acc_000308,con_000308_1,thr_tch_000308_5,email,1,sequence,2026-06-29T18:24:00Z,Expense control without reimbursements,delivered
+tch_000311_1,acc_000311,con_000311_1,thr_tch_000311_1,email,1,sequence,2026-09-24T09:10:00Z,How does Farms Minca handle travel expenses?,opened
+tch_000313_1,acc_000313,con_000313_1,thr_tch_000313_1,email,1,ae,2026-07-07T06:05:00Z,Spend management for Roem Digital,delivered
+tch_000315_1,acc_000315,con_000315_2,thr_tch_000315_1,email,1,sequence,2026-04-28T07:46:00Z,Corporate cards for your team,delivered
+tch_000318_1,acc_000318,con_000318_2,thr_tch_000318_1,email,1,sequence,2026-05-21T03:13:00Z,Corporate cards for your team,opened
+tch_000321_1,acc_000321,con_000321_1,thr_tch_000321_1,email,1,sequence,2026-05-15T10:43:00Z,Spend management for Systems Ixpan,opened
+tch_000322_1,acc_000322,con_000322_1,thr_tch_000322_1,email,2,sequence,2026-08-02T04:56:00Z,Spend management for Balis Services,delivered
+tch_000322_2,acc_000322,con_000322_1,thr_tch_000322_2,email,1,sequence,2026-07-20T14:14:00Z,Expense control without reimbursements,opened
+tch_000324_1,acc_000324,con_000324_3,thr_tch_000324_1,email,3,sequence,2026-09-18T02:43:00Z,Expense control without reimbursements,delivered
+tch_000324_2,acc_000324,con_000324_3,thr_tch_000324_2,email,2,sequence,2026-09-08T07:48:00Z,Expense control without reimbursements,delivered
+tch_000324_3,acc_000324,con_000324_3,thr_tch_000324_3,email,1,sequence,2026-08-28T09:33:00Z,How does Dorba Studio handle travel expenses?,delivered
+tch_000326_1,acc_000326,con_000326_3,thr_tch_000326_1,email,1,sequence,2026-08-04T21:15:00Z,Expense control without reimbursements,opened
+tch_000329_1,acc_000329,con_000329_3,thr_tch_000329_1,email,2,sequence,2026-07-25T21:13:00Z,Corporate cards for your team,delivered
+tch_000329_2,acc_000329,con_000329_3,thr_tch_000329_2,email,1,sequence,2026-07-17T19:23:00Z,Spend management for Torcen Energy,opened
+tch_000330_1,acc_000330,con_000330_2,thr_tch_000330_1,email,1,ae,2026-08-10T23:32:00Z,Corporate cards for your team,delivered
+tch_000335_1,acc_000335,con_000335_2,thr_tch_000335_1,email,2,sequence,2026-07-10T08:32:00Z,How does Meror handle travel expenses?,delivered
+tch_000335_2,acc_000335,con_000335_2,thr_tch_000335_2,email,1,sequence,2026-06-23T08:29:00Z,Corporate cards for your team,delivered
+tch_000336_1,acc_000336,con_000336_1,thr_tch_000336_1,email,1,sequence,2026-09-17T19:41:00Z,Spend management for Manufacturing Kaul,delivered
+tch_000337_1,acc_000337,con_000337_1,thr_tch_000337_1,email,4,sequence,2026-08-05T22:59:00Z,How does Group Balu handle travel expenses?,delivered
+tch_000337_2,acc_000337,con_000337_1,thr_tch_000337_2,email,4,sequence,2026-07-27T20:22:00Z,Corporate cards for your team,opened
+tch_000337_3,acc_000337,con_000337_1,thr_tch_000337_3,email,3,sequence,2026-07-07T20:46:00Z,Spend management for Group Balu,opened
+tch_000337_4,acc_000337,con_000337_1,thr_tch_000337_4,email,2,sequence,2026-06-30T07:03:00Z,How does Group Balu handle travel expenses?,delivered
+tch_000337_5,acc_000337,con_000337_1,thr_tch_000337_5,email,1,sequence,2026-06-18T07:48:00Z,Expense control without reimbursements,delivered
+tch_000338_1,acc_000338,con_000338_2,thr_tch_000338_1,email,1,sequence,2026-05-13T09:33:00Z,Corporate cards for your team,delivered
+tch_000346_1,acc_000346,con_000346_2,thr_tch_000346_1,email,4,sequence,2026-07-30T20:54:00Z,Spend management for Group Ciix,delivered
+tch_000346_2,acc_000346,con_000346_2,thr_tch_000346_2,email,3,sequence,2026-07-24T03:24:00Z,How does Group Ciix handle travel expenses?,delivered
+tch_000346_3,acc_000346,con_000346_2,thr_tch_000346_3,email,2,sequence,2026-07-16T04:34:00Z,How does Group Ciix handle travel expenses?,opened
+tch_000346_4,acc_000346,con_000346_2,thr_tch_000346_4,email,1,sequence,2026-06-29T10:16:00Z,Corporate cards for your team,opened
+tch_000347_1,acc_000347,con_000347_1,thr_tch_000347_1,email,2,sequence,2026-09-28T15:29:00Z,Spend management for Health Vaca,delivered
+tch_000347_2,acc_000347,con_000347_1,thr_tch_000347_2,email,1,sequence,2026-09-20T00:57:00Z,Corporate cards for your team,delivered
+tch_000349_1,acc_000349,con_000349_4,thr_tch_000349_1,email,3,sequence,2026-09-17T23:04:00Z,Spend management for Medical Martra,delivered
+tch_000349_2,acc_000349,con_000349_4,thr_tch_000349_2,email,2,sequence,2026-09-10T07:58:00Z,How does Medical Martra handle travel expenses?,opened
+tch_000349_3,acc_000349,con_000349_4,thr_tch_000349_3,email,1,sequence,2026-08-29T05:04:00Z,Expense control without reimbursements,delivered
+tch_000350_1,acc_000350,con_000350_1,thr_tch_000350_1,email,1,sequence,2026-04-03T11:07:00Z,Spend management for Mining Joem,delivered
+tch_000352_1,acc_000352,con_000352_1,thr_tch_000352_1,email,1,sequence,2026-09-23T16:02:00Z,Spend management for Freight Tomin,opened
+tch_000353_1,acc_000353,con_000353_1,thr_tch_000353_1,email,1,ae,2026-09-07T18:35:00Z,How does Nexni Freight handle travel expenses?,delivered
+tch_000356_1,acc_000356,con_000356_2,thr_tch_000356_1,email,3,sequence,2026-09-20T20:13:00Z,Corporate cards for your team,delivered
+tch_000356_2,acc_000356,con_000356_2,thr_tch_000356_2,email,2,sequence,2026-09-16T11:32:00Z,Expense control without reimbursements,delivered
+tch_000356_3,acc_000356,con_000356_2,thr_tch_000356_3,email,1,sequence,2026-09-07T18:21:00Z,Expense control without reimbursements,delivered
+tch_000357_1,acc_000357,con_000357_1,thr_tch_000357_1,email,1,ae,2026-04-12T00:42:00Z,Expense control without reimbursements,delivered
+tch_000358_1,acc_000358,con_000358_2,thr_tch_000358_1,email,1,sequence,2026-09-21T07:38:00Z,Expense control without reimbursements,opened
+tch_000359_1,acc_000359,con_000359_3,thr_tch_000359_1,email,1,sequence,2026-05-12T07:59:00Z,Expense control without reimbursements,opened
+tch_000368_1,acc_000368,con_000368_1,thr_tch_000368_1,email,1,sequence,2026-08-03T03:52:00Z,Expense control without reimbursements,opened
+tch_000370_1,acc_000370,con_000370_2,thr_tch_000370_1,email,4,sequence,2026-06-22T19:09:00Z,Corporate cards for your team,delivered
+tch_000370_2,acc_000370,con_000370_2,thr_tch_000370_2,email,4,sequence,2026-06-07T14:35:00Z,Spend management for Sani,delivered
+tch_000370_3,acc_000370,con_000370_2,thr_tch_000370_3,email,3,sequence,2026-05-22T09:32:00Z,Expense control without reimbursements,delivered
+tch_000370_4,acc_000370,con_000370_2,thr_tch_000370_4,email,2,sequence,2026-05-02T18:25:00Z,How does Sani handle travel expenses?,delivered
+tch_000370_5,acc_000370,con_000370_2,thr_tch_000370_5,email,1,sequence,2026-04-14T16:47:00Z,Corporate cards for your team,delivered
+tch_000373_1,acc_000373,con_000373_4,thr_tch_000373_1,email,4,sequence,2026-07-26T16:43:00Z,Corporate cards for your team,delivered
+tch_000373_2,acc_000373,con_000373_4,thr_tch_000373_2,email,3,sequence,2026-07-08T13:09:00Z,Expense control without reimbursements,delivered
+tch_000373_3,acc_000373,con_000373_4,thr_tch_000373_3,email,2,sequence,2026-06-30T19:36:00Z,Expense control without reimbursements,opened
+tch_000373_4,acc_000373,con_000373_4,thr_tch_000373_4,email,1,sequence,2026-06-11T10:00:00Z,How does Services Neix handle travel expenses?,opened
+tch_000374_1,acc_000374,con_000374_2,thr_tch_000374_1,email,2,sequence,2026-09-21T20:40:00Z,How does Nexto handle travel expenses?,delivered
+tch_000374_2,acc_000374,con_000374_2,thr_tch_000374_2,email,1,sequence,2026-09-11T06:00:00Z,Corporate cards for your team,opened
+tch_000375_1,acc_000375,con_000375_1,thr_tch_000375_1,email,1,sequence,2026-09-19T05:55:00Z,Spend management for Group Lojo,delivered
+tch_000377_1,acc_000377,con_000377_1,thr_tch_000377_1,email,2,sequence,2026-08-17T12:58:00Z,Expense control without reimbursements,opened
+tch_000377_2,acc_000377,con_000377_1,thr_tch_000377_2,email,1,sequence,2026-08-07T05:41:00Z,How does Mover Farms handle travel expenses?,delivered
+tch_000378_1,acc_000378,con_000378_1,thr_tch_000378_1,email,1,sequence,2026-03-28T05:34:00Z,Spend management for Panmer,delivered
+tch_000380_1,acc_000380,con_000380_1,thr_tch_000380_1,email,2,sequence,2026-08-27T07:09:00Z,How does Cici handle travel expenses?,opened
+tch_000380_2,acc_000380,con_000380_1,thr_tch_000380_2,email,1,sequence,2026-08-20T12:25:00Z,Spend management for Cici,delivered
+tch_000383_1,acc_000383,con_000383_1,thr_tch_000383_1,email,4,sequence,2026-08-28T07:26:00Z,Spend management for Perpan Travel,opened
+tch_000383_2,acc_000383,con_000383_1,thr_tch_000383_2,email,4,sequence,2026-08-16T20:35:00Z,Spend management for Perpan Travel,delivered
+tch_000383_3,acc_000383,con_000383_1,thr_tch_000383_3,email,3,sequence,2026-07-30T16:44:00Z,Spend management for Perpan Travel,delivered
+tch_000383_4,acc_000383,con_000383_1,thr_tch_000383_4,email,2,sequence,2026-07-14T12:18:00Z,How does Perpan Travel handle travel expenses?,delivered
+tch_000383_5,acc_000383,con_000383_1,thr_tch_000383_5,email,1,sequence,2026-07-05T21:32:00Z,Corporate cards for your team,delivered
+tch_000389_1,acc_000389,con_000389_1,thr_tch_000389_1,email,3,sequence,2026-07-25T20:55:00Z,Spend management for Health Mocen,delivered
+tch_000389_2,acc_000389,con_000389_1,thr_tch_000389_2,email,2,sequence,2026-07-13T16:25:00Z,Expense control without reimbursements,delivered
+tch_000389_3,acc_000389,con_000389_1,thr_tch_000389_3,email,1,sequence,2026-06-24T04:19:00Z,How does Health Mocen handle travel expenses?,delivered
+tch_000395_1,acc_000395,con_000395_1,thr_tch_000395_1,email,1,sequence,2026-07-01T17:27:00Z,Spend management for Group Ixfer,delivered
+tch_000397_1,acc_000397,con_000397_1,thr_tch_000397_1,email,2,sequence,2026-07-10T19:51:00Z,Corporate cards for your team,delivered
+tch_000397_2,acc_000397,con_000397_1,thr_tch_000397_2,email,1,sequence,2026-07-03T16:20:00Z,How does Capan Harvest handle travel expenses?,opened
+tch_000398_1,acc_000398,con_000398_1,thr_tch_000398_1,email,3,sequence,2026-09-27T21:21:00Z,How does Joix handle travel expenses?,delivered
+tch_000398_2,acc_000398,con_000398_1,thr_tch_000398_2,email,2,sequence,2026-09-21T08:13:00Z,Expense control without reimbursements,opened
+tch_000398_3,acc_000398,con_000398_1,thr_tch_000398_3,email,1,sequence,2026-09-13T20:58:00Z,Corporate cards for your team,delivered
+tch_000401_1,acc_000401,con_000401_2,thr_tch_000401_1,email,3,sequence,2026-09-24T21:18:00Z,Spend management for Farms Feryra,delivered
+tch_000401_2,acc_000401,con_000401_2,thr_tch_000401_2,email,2,sequence,2026-09-13T14:51:00Z,Spend management for Farms Feryra,opened
+tch_000401_3,acc_000401,con_000401_2,thr_tch_000401_3,email,1,sequence,2026-09-01T22:47:00Z,Expense control without reimbursements,delivered
+tch_000406_1,acc_000406,con_000406_2,thr_tch_000406_1,email,1,sequence,2026-04-28T07:26:00Z,Spend management for Group Cial,delivered
+tch_000407_1,acc_000407,con_000407_2,thr_tch_000407_1,email,1,sequence,2026-09-28T08:16:00Z,How does Group Cujo handle travel expenses?,opened
+tch_000409_1,acc_000409,con_000409_1,thr_tch_000409_1,email,3,sequence,2026-09-24T21:31:00Z,Corporate cards for your team,delivered
+tch_000409_2,acc_000409,con_000409_1,thr_tch_000409_2,email,2,sequence,2026-09-18T08:10:00Z,Expense control without reimbursements,opened
+tch_000409_3,acc_000409,con_000409_1,thr_tch_000409_3,email,1,sequence,2026-09-12T01:39:00Z,Expense control without reimbursements,delivered
+tch_000411_1,acc_000411,con_000411_4,thr_tch_000411_1,email,1,sequence,2026-05-12T19:45:00Z,Corporate cards for your team,opened
+tch_000414_1,acc_000414,con_000414_1,thr_tch_000414_1,email,2,sequence,2026-09-19T19:01:00Z,Corporate cards for your team,opened
+tch_000414_2,acc_000414,con_000414_1,thr_tch_000414_2,email,1,sequence,2026-09-08T07:09:00Z,Spend management for Rifo,delivered
+tch_000416_1,acc_000416,con_000416_1,thr_tch_000416_1,email,4,sequence,2026-06-23T06:19:00Z,How does Lisri Mercantile handle travel expenses?,delivered
+tch_000416_2,acc_000416,con_000416_1,thr_tch_000416_2,email,4,sequence,2026-06-11T01:57:00Z,How does Lisri Mercantile handle travel expenses?,opened
+tch_000416_3,acc_000416,con_000416_1,thr_tch_000416_3,email,3,sequence,2026-05-30T09:54:00Z,Expense control without reimbursements,opened
+tch_000416_4,acc_000416,con_000416_1,thr_tch_000416_4,email,2,sequence,2026-05-16T08:06:00Z,Spend management for Lisri Mercantile,delivered
+tch_000416_5,acc_000416,con_000416_1,thr_tch_000416_5,email,1,sequence,2026-05-04T12:23:00Z,Spend management for Lisri Mercantile,delivered
+tch_000417_1,acc_000417,con_000417_2,thr_tch_000417_1,email,1,sequence,2026-06-11T00:06:00Z,Expense control without reimbursements,delivered
+tch_000419_1,acc_000419,con_000419_2,thr_tch_000419_1,email,4,sequence,2026-07-21T11:06:00Z,Spend management for Freight Rior,delivered
+tch_000419_2,acc_000419,con_000419_2,thr_tch_000419_2,email,3,sequence,2026-07-02T06:04:00Z,Expense control without reimbursements,delivered
+tch_000419_3,acc_000419,con_000419_2,thr_tch_000419_3,email,2,sequence,2026-06-23T23:36:00Z,How does Freight Rior handle travel expenses?,delivered
+tch_000419_4,acc_000419,con_000419_2,thr_tch_000419_4,email,1,sequence,2026-06-17T15:07:00Z,Corporate cards for your team,opened
+tch_000422_1,acc_000422,con_000422_1,thr_tch_000422_1,email,2,sequence,2026-07-03T18:31:00Z,Expense control without reimbursements,opened
+tch_000422_2,acc_000422,con_000422_1,thr_tch_000422_2,email,1,sequence,2026-06-24T01:29:00Z,Spend management for Group Perem,delivered
+tch_000423_1,acc_000423,con_000423_3,thr_tch_000423_1,email,1,sequence,2026-05-14T04:31:00Z,Spend management for Tech Luma,opened
+tch_000427_1,acc_000427,con_000427_1,thr_tch_000427_1,email,2,sequence,2026-06-19T15:13:00Z,Expense control without reimbursements,delivered
+tch_000427_2,acc_000427,con_000427_1,thr_tch_000427_2,email,1,sequence,2026-06-09T06:55:00Z,Corporate cards for your team,delivered
+tch_000431_1,acc_000431,con_000431_2,thr_tch_000431_1,email,4,sequence,2026-08-18T08:50:00Z,How does Group Minnex handle travel expenses?,opened
+tch_000431_2,acc_000431,con_000431_2,thr_tch_000431_2,email,4,sequence,2026-08-09T11:47:00Z,Corporate cards for your team,opened
+tch_000431_3,acc_000431,con_000431_2,thr_tch_000431_3,email,3,sequence,2026-07-31T07:52:00Z,How does Group Minnex handle travel expenses?,opened
+tch_000431_4,acc_000431,con_000431_2,thr_tch_000431_4,email,2,sequence,2026-07-20T17:12:00Z,Spend management for Group Minnex,opened
+tch_000431_5,acc_000431,con_000431_2,thr_tch_000431_5,email,1,sequence,2026-07-11T21:31:00Z,Corporate cards for your team,opened
+tch_000434_1,acc_000434,con_000434_1,thr_tch_000434_1,email,1,sequence,2026-09-18T05:39:00Z,Expense control without reimbursements,opened
+tch_000435_1,acc_000435,con_000435_1,thr_tch_000435_1,email,3,sequence,2026-09-29T08:20:00Z,Corporate cards for your team,opened
+tch_000435_2,acc_000435,con_000435_1,thr_tch_000435_2,email,2,sequence,2026-09-17T08:36:00Z,Corporate cards for your team,delivered
+tch_000435_3,acc_000435,con_000435_1,thr_tch_000435_3,email,1,sequence,2026-09-10T23:51:00Z,Spend management for Group Mover,delivered
+tch_000437_1,acc_000437,con_000437_1,thr_tch_000437_1,email,4,sequence,2026-07-31T03:05:00Z,Expense control without reimbursements,delivered
+tch_000437_2,acc_000437,con_000437_1,thr_tch_000437_2,email,4,sequence,2026-07-23T15:42:00Z,Corporate cards for your team,delivered
+tch_000437_3,acc_000437,con_000437_1,thr_tch_000437_3,email,3,sequence,2026-07-16T04:49:00Z,Expense control without reimbursements,opened
+tch_000437_4,acc_000437,con_000437_1,thr_tch_000437_4,email,2,sequence,2026-06-30T02:27:00Z,How does Viver Health handle travel expenses?,opened
+tch_000437_5,acc_000437,con_000437_1,thr_tch_000437_5,email,1,sequence,2026-06-19T16:52:00Z,Corporate cards for your team,opened
+tch_000441_1,acc_000441,con_000441_1,thr_tch_000441_1,email,2,sequence,2026-08-22T11:50:00Z,Corporate cards for your team,delivered
+tch_000441_2,acc_000441,con_000441_1,thr_tch_000441_2,email,1,sequence,2026-08-05T05:26:00Z,Spend management for Group Tenqui,delivered
+tch_000446_1,acc_000446,con_000446_1,thr_tch_000446_1,email,1,ae,2026-08-19T07:35:00Z,Expense control without reimbursements,delivered
+tch_000446_2,acc_000446,con_000446_1,thr_tch_000446_2,email,2,ae,2026-09-09T03:17:00Z,How does Retail Pido handle travel expenses?,opened
+tch_000447_1,acc_000447,con_000447_3,thr_tch_000447_1,email,3,sequence,2026-09-29T20:27:00Z,Expense control without reimbursements,opened
+tch_000447_2,acc_000447,con_000447_3,thr_tch_000447_2,email,2,sequence,2026-09-21T00:20:00Z,Corporate cards for your team,opened
+tch_000447_3,acc_000447,con_000447_3,thr_tch_000447_3,email,1,sequence,2026-09-12T09:45:00Z,Spend management for Cenqui Builders,delivered
+tch_000448_1,acc_000448,con_000448_1,thr_tch_000448_1,email,4,sequence,2026-09-13T17:30:00Z,How does Hotels Ricu handle travel expenses?,delivered
+tch_000448_2,acc_000448,con_000448_1,thr_tch_000448_2,email,3,sequence,2026-08-29T21:58:00Z,Spend management for Hotels Ricu,opened
+tch_000448_3,acc_000448,con_000448_1,thr_tch_000448_3,email,2,sequence,2026-08-20T01:15:00Z,How does Hotels Ricu handle travel expenses?,delivered
+tch_000448_4,acc_000448,con_000448_1,thr_tch_000448_4,email,1,sequence,2026-08-06T04:25:00Z,Spend management for Hotels Ricu,opened
+tch_000451_1,acc_000451,con_000451_2,thr_tch_000451_1,email,1,sequence,2026-08-19T07:17:00Z,Spend management for Services Cenma,opened
+tch_000462_1,acc_000462,con_000462_1,thr_tch_000462_1,email,2,cs,2026-09-06T14:13:00Z,How does Group Mofo handle travel expenses?,delivered
+tch_000463_1,acc_000463,con_000463_1,thr_tch_000463_1,email,1,sequence,2026-07-23T21:34:00Z,Corporate cards for your team,delivered
+tch_000465_1,acc_000465,con_000465_1,thr_tch_000465_1,email,1,sequence,2026-04-04T20:27:00Z,How does Nexlu Health handle travel expenses?,opened
+tch_000467_1,acc_000467,con_000467_1,thr_tch_000467_1,email,2,sequence,2026-09-27T10:42:00Z,Expense control without reimbursements,delivered
+tch_000467_2,acc_000467,con_000467_1,thr_tch_000467_2,email,1,sequence,2026-09-15T16:13:00Z,Expense control without reimbursements,opened
+tch_000469_1,acc_000469,con_000469_1,thr_tch_000469_1,email,2,sequence,2026-09-22T13:59:00Z,How does Group Nezu handle travel expenses?,opened
+tch_000469_2,acc_000469,con_000469_1,thr_tch_000469_2,email,1,sequence,2026-09-10T05:59:00Z,Spend management for Group Nezu,delivered
+tch_000474_1,acc_000474,con_000474_2,thr_tch_000474_1,email,1,ae,2026-08-17T01:21:00Z,Corporate cards for your team,delivered
+tch_000475_1,acc_000475,con_000475_1,thr_tch_000475_1,email,1,sequence,2026-08-21T03:21:00Z,Corporate cards for your team,delivered
+tch_000476_1,acc_000476,con_000476_1,thr_tch_000476_1,email,1,sequence,2026-07-30T02:05:00Z,How does Moyra Industries handle travel expenses?,delivered
+tch_000481_1,acc_000481,con_000481_1,thr_tch_000481_1,email,1,ae,2026-05-18T03:10:00Z,Expense control without reimbursements,delivered
+tch_000483_1,acc_000483,con_000483_1,thr_tch_000483_1,email,2,sequence,2026-09-27T21:59:00Z,How does Liszu Cargo handle travel expenses?,delivered
+tch_000483_2,acc_000483,con_000483_1,thr_tch_000483_2,email,1,sequence,2026-09-16T14:38:00Z,Spend management for Liszu Cargo,delivered
+tch_000484_1,acc_000484,con_000484_3,thr_tch_000484_1,email,2,sequence,2026-09-28T21:46:00Z,How does Merci handle travel expenses?,opened
+tch_000484_2,acc_000484,con_000484_3,thr_tch_000484_2,email,1,sequence,2026-09-22T06:41:00Z,How does Merci handle travel expenses?,opened
+tch_000485_1,acc_000485,con_000485_2,thr_tch_000485_1,email,1,sequence,2026-07-20T21:44:00Z,Spend management for Dormin,opened
+tch_000487_1,acc_000487,con_000487_2,thr_tch_000487_1,email,1,sequence,2026-09-29T22:01:00Z,Spend management for Ordor,delivered
+tch_000490_1,acc_000490,con_000490_1,thr_tch_000490_1,email,4,sequence,2026-06-26T09:54:00Z,Corporate cards for your team,opened
+tch_000490_2,acc_000490,con_000490_1,thr_tch_000490_2,email,4,sequence,2026-06-15T15:29:00Z,Expense control without reimbursements,opened
+tch_000490_3,acc_000490,con_000490_1,thr_tch_000490_3,email,3,sequence,2026-05-25T17:02:00Z,How does Trading Batra handle travel expenses?,delivered
+tch_000490_4,acc_000490,con_000490_1,thr_tch_000490_4,email,2,sequence,2026-05-16T17:26:00Z,Corporate cards for your team,opened
+tch_000490_5,acc_000490,con_000490_1,thr_tch_000490_5,email,1,sequence,2026-05-01T00:18:00Z,How does Trading Batra handle travel expenses?,delivered
+tch_000492_1,acc_000492,con_000492_3,thr_tch_000492_1,email,2,sequence,2026-09-19T22:12:00Z,Expense control without reimbursements,delivered
+tch_000492_2,acc_000492,con_000492_3,thr_tch_000492_2,email,1,sequence,2026-09-11T01:48:00Z,Expense control without reimbursements,delivered
+tch_000493_1,acc_000493,con_000493_1,thr_tch_000493_1,email,2,sequence,2026-09-22T08:44:00Z,Corporate cards for your team,delivered
+tch_000493_2,acc_000493,con_000493_1,thr_tch_000493_2,email,1,sequence,2026-09-13T18:10:00Z,Corporate cards for your team,delivered
+tch_000494_1,acc_000494,con_000494_1,thr_tch_000494_1,email,2,sequence,2026-07-08T13:46:00Z,How does Emqui Trading handle travel expenses?,delivered
+tch_000494_2,acc_000494,con_000494_1,thr_tch_000494_2,email,1,sequence,2026-06-20T22:52:00Z,Corporate cards for your team,opened
+tch_000496_1,acc_000496,con_000496_2,thr_tch_000496_1,email,3,sequence,2026-07-22T13:09:00Z,Corporate cards for your team,opened
+tch_000496_2,acc_000496,con_000496_2,thr_tch_000496_2,email,2,sequence,2026-07-05T19:17:00Z,Spend management for Orsa Beverages,delivered
+tch_000496_3,acc_000496,con_000496_2,thr_tch_000496_3,email,1,sequence,2026-06-20T06:17:00Z,Expense control without reimbursements,opened
+tch_000498_1,acc_000498,con_000498_2,thr_tch_000498_1,email,2,sequence,2026-09-28T14:37:00Z,Expense control without reimbursements,opened
+tch_000498_2,acc_000498,con_000498_2,thr_tch_000498_2,email,1,sequence,2026-09-17T22:25:00Z,How does Perci handle travel expenses?,opened
+tch_000499_1,acc_000499,con_000499_1,thr_tch_000499_1,email,4,sequence,2026-08-25T16:05:00Z,Spend management for Systems Pergi,delivered
+tch_000499_2,acc_000499,con_000499_1,thr_tch_000499_2,email,3,sequence,2026-08-10T22:58:00Z,Corporate cards for your team,delivered
+tch_000499_3,acc_000499,con_000499_1,thr_tch_000499_3,email,2,sequence,2026-07-30T01:39:00Z,Corporate cards for your team,delivered
+tch_000499_4,acc_000499,con_000499_1,thr_tch_000499_4,email,1,sequence,2026-07-20T14:33:00Z,How does Systems Pergi handle travel expenses?,delivered

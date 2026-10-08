@@ -1,0 +1,48 @@
+name: tests
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: growth-orchestrator
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"   # the minimum the README promises
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # Only for the browser test (tests/js/ui_persistence.test.mjs); the runner's Chrome is used, nothing is downloaded.
+      - name: Install playwright-core
+        working-directory: .
+        run: npm install --no-save --no-package-lock playwright-core
+
+      # The 50k synthetic world is not in git (390 MB); without it 5 tests skip. Generating it lets every test run,
+      # including the ones that fail when the page data is stale.
+      - name: Generate the synthetic world
+        run: python -m generator all --seed 42 --n 50000
+
+      # Only the line naming the Python version may differ (the generator records it in two files).
+      - name: The seed reproduces the committed artefacts exactly
+        run: |
+          git diff --exit-code -I '"python": "' -I '· python `'
+
+      - name: Run the tests
+        env:
+          CHROMIUM_PATH: /usr/bin/google-chrome
+          REQUIRE_BROWSER: "1"   # the browser test must run here, not skip itself
+        run: python -m unittest discover -s tests -t .

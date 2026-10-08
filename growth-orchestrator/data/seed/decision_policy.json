@@ -1,0 +1,38 @@
+{
+  "note": "ASSUMPTIONS. Read by orchestrator/policy.py; mirrored in data/POLICY.md",
+  "recent_outreach_days": 14,
+  "sequence_max_touches": 4,
+  "sequence_window_days": 180,
+  "sequence_cooldown_days": 120,
+  "stale_enrichment_days": 90,
+  "lost_cooldown_days": 90,
+  "icp_min_employees": 11,
+  "max_enrich_attempts": 2,
+  "open_stages": [
+    "discovery",
+    "demo",
+    "proposal",
+    "negotiation"
+  ],
+  "non_icp_industries": [
+    "Government & Public Sector",
+    "Nonprofit"
+  ],
+  "function_score": {
+    "finance": 5,
+    "procurement": 4,
+    "executive": 4,
+    "operations": 3,
+    "it": 2,
+    "hr": 1,
+    "other": 0
+  },
+  "seniority_score": {
+    "c_level": 5,
+    "vp": 4,
+    "director": 3,
+    "manager": 2,
+    "ic": 1
+  },
+  "ai_confidence_min_auto": 0.75
+}

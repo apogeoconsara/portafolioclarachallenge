@@ -1,0 +1,178 @@
+{
+  "flows": [
+    {
+      "id": "D1",
+      "title": "Successful end-to-end flow with grounded personalization",
+      "requirement": "at least one successful flow",
+      "golden": [
+        "G080"
+      ],
+      "recordings": [
+        "EV-G080:good"
+      ],
+      "show": [
+        "I send the list-import event and show it persisted",
+        "I load the account, contacts and facts",
+        "I show the rules returning ELIGIBLE with the finance director as best contact",
+        "I show the AI drafting copy that cites usable fact_ids only",
+        "I show the validator accepting it and the approved template with a grounded opening",
+        "I show the send landing inside the recipient's window",
+        "I close on the audit row: event, state version, decision, reasons, model output, validation verdict, action"
+      ],
+      "expected_audit": [
+        "received",
+        "decided:contact",
+        "ai_draft:accept",
+        "sent"
+      ]
+    },
+    {
+      "id": "D2",
+      "title": "Duplicate delivery",
+      "requirement": "one duplicate event",
+      "golden": [
+        "G040",
+        "G041",
+        "G042"
+      ],
+      "recordings": [],
+      "show": [
+        "I deliver the same webhook twice and the second is ignored",
+        "I deliver the same idempotency key under a new event_id and it is ignored",
+        "I deliver the CRM mirror (other source, other key) and it is deduped by content",
+        "I show exactly one email and one audit trail"
+      ],
+      "expected_audit": [
+        "received",
+        "decided:contact",
+        "sent",
+        "duplicate_ignored"
+      ]
+    },
+    {
+      "id": "D3",
+      "title": "Failure: transient error and uncertain outcome",
+      "requirement": "one realistic failure scenario",
+      "golden": [
+        "G070",
+        "G072",
+        "G075"
+      ],
+      "recordings": [],
+      "show": [
+        "I make the send API return 503: backoff, retry, ONE email (same idempotency key)",
+        "I make it return 200 with status=unknown: I reconcile by key before any retry and never re-send blindly",
+        "I make enrichment fail persistently: retry budget spent, dead-letter, alert, human"
+      ],
+      "expected_audit": [
+        "send_attempt_1:error",
+        "send_attempt_2:ok",
+        "sent"
+      ]
+    },
+    {
+      "id": "D4",
+      "title": "Ambiguous / unsafe AI output",
+      "requirement": "one ambiguous or unsafe AI case",
+      "golden": [
+        "G064",
+        "G065",
+        "G067"
+      ],
+      "recordings": [
+        "EV-R-MIX-01:overconfident_wrong_label",
+        "EV-R-INJ-01:obeys_injection",
+        "EV-R-AMB-03:good",
+        "EV-R-AMB-03:wrong_but_valid_overconfident"
+      ],
+      "show": [
+        "I replay 'I'm interested but don't write to me again': the model says INTERESTED at 0.96, and my deterministic opt-out guard overrides it to suppress",
+        "I replay a prompt injection that the model obeys: the validator rejects it and a human gets it",
+        "I replay an ambiguous reply at low confidence: it goes to a human and never auto-acts",
+        "I say the honest limit out loud: a plausible, schema-valid, wrong answer passes, and only labelled evals and human sampling catch it"
+      ],
+      "expected_audit": [
+        "ai_output:valid",
+        "guard:G001",
+        "decided:suppress"
+      ]
+    },
+    {
+      "id": "D5",
+      "title": "Malformed AI output",
+      "requirement": "AI output may be incomplete, malformed or unsupported by the data",
+      "golden": [
+        "G063",
+        "G066"
+      ],
+      "recordings": [
+        "EV-R-NOW-01:truncated_json",
+        "EV-R-NOW-01:date_invented",
+        "EV-R-WRG-01:hallucinated_referral_email",
+        "EV-R-INT-13:qualification_hallucinated"
+      ],
+      "show": [
+        "I replay truncated JSON: one retry, then escalation",
+        "I replay an invented date, referral and team size that are not in the text: escalation, no retry"
+      ],
+      "expected_audit": [
+        "ai_output:invalid",
+        "retry_1",
+        "escalated"
+      ]
+    },
+    {
+      "id": "D6",
+      "title": "Out-of-order race (late unsubscribe)",
+      "requirement": "events may arrive delayed or out of order",
+      "golden": [
+        "G047",
+        "G048"
+      ],
+      "recordings": [],
+      "show": [
+        "I process the targeting event first, when the state still looks eligible",
+        "I deliver the unsubscribe that happened BEFORE it, 20 hours late",
+        "I show it applied: the contact is suppressed, anything still pending is cancelled, and because the first email already went out on stale knowledge, a human is flagged (SENT_BEFORE_LATE_FACT)"
+      ],
+      "expected_audit": [
+        "decided:contact",
+        "late_event",
+        "suppressed",
+        "pending_cancelled"
+      ]
+    }
+  ],
+  "assumption_drills": [
+    {
+      "change": "Cool-down after outreach goes from 14 to 30 days",
+      "where": "config.RECENT_OUTREACH_DAYS + policy caps",
+      "proof": "boundary goldens G009/G010 flip; re-run oracle + tests"
+    },
+    {
+      "change": "AI may no longer suppress on its own (or may, with 100% human review)",
+      "where": "send_policy.ai_autonomy",
+      "proof": "recordings D4: opt-out guard already deterministic"
+    },
+    {
+      "change": "Volume grows 10x (500k accounts/month)",
+      "where": "python -m generator build --n 500000",
+      "proof": "burst of ~100k events/20 min per list drop; check queue depth, rate limits in send_policy.api_limits"
+    },
+    {
+      "change": "Second channel (WhatsApp) added",
+      "where": "send_policy.channel + templates + opt-out rules per channel",
+      "proof": "templates.jsonl pattern; golden opt-out must apply across channels"
+    },
+    {
+      "change": "Enrichment provider becomes unreliable",
+      "where": "mock_behavior distribution in config.ENRICH_BEHAVIORS",
+      "proof": "G074-G077; retry budget and dead-letter path"
+    },
+    {
+      "change": "SDR capacity doubles",
+      "where": "impact.ASSUMPTIONS.control.coverage_of_eligible",
+      "proof": "impact_example.md: incremental pipeline shrinks, the measurement design is unchanged"
+    }
+  ]
+}

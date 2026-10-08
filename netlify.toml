@@ -1,0 +1,19 @@
+[build]
+  publish = "public"
+  command = ""
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[context.deploy-preview]
+  command = ""
+
+[context.branch-deploy]
+  command = ""
+
+# The challenge page used to live at /orchestrator/; it is now the home page.
+[[redirects]]
+  from = "/orchestrator/*"
+  to = "/"
+  status = 301

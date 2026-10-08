@@ -1,0 +1,65 @@
+{
+  "status": "ASSUMPTIONS - illustrative, to be replaced with Clara's measured times. Editable on the page.",
+  "hours_per_person_month": 160,
+  "people_cost_usd_per_hour": 22,
+  "tasks": [
+    {
+      "id": "check",
+      "name": "Check each account is safe to contact",
+      "does": "Suppression list, CRM status, duplicates, open deals, last contact date",
+      "applies_to": "every account",
+      "manual_minutes": 1.5
+    },
+    {
+      "id": "enrich",
+      "name": "Find missing or outdated company data",
+      "does": "Headcount, industry and a valid contact email",
+      "applies_to": "accounts that need better data",
+      "manual_minutes": 10
+    },
+    {
+      "id": "prioritize",
+      "name": "Decide who is worth attention first",
+      "does": "Size, payment-pain hypothesis and growth signals",
+      "applies_to": "accounts ready to contact",
+      "manual_minutes": 2
+    },
+    {
+      "id": "email",
+      "name": "Research, write and log the outreach email",
+      "does": "Pick the contact, find a fact to mention, draft, schedule in the right time window",
+      "applies_to": "accounts ready to contact",
+      "manual_minutes": 18
+    },
+    {
+      "id": "nurture",
+      "name": "Enroll weaker-fit accounts in the slow nurture track",
+      "does": "Add them to a low-touch track instead of writing them a personal email",
+      "applies_to": "accounts routed to nurture",
+      "manual_minutes": 3
+    },
+    {
+      "id": "route",
+      "name": "Hand the account to the right sales exec",
+      "does": "Pick an available exec by country, language and workload",
+      "applies_to": "accounts that already have an owner",
+      "manual_minutes": 4
+    }
+  ],
+  "people_still_needed": [
+    {
+      "id": "review",
+      "name": "Review accounts the rules cannot settle",
+      "applies_to": "accounts sent to a person",
+      "minutes": 8
+    },
+    {
+      "id": "spot",
+      "name": "Spot-check the outreach emails",
+      "applies_to": "accounts ready to contact",
+      "minutes": 1.5
+    }
+  ],
+  "ai_cost_usd_per_call": 0.0025,
+  "ai_cost_note": "ASSUMPTION: about 1,000 input and 250 output tokens per call at small-model prices."
+}

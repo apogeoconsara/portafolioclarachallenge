@@ -1,0 +1,3466 @@
+{
+  "suite": "recorded",
+  "model": "none (recorded outputs)",
+  "mode": "recorded",
+  "ran_at": "2026-10-06T18:00:54Z",
+  "summary": {
+    "recordings": 220,
+    "verdict_and_codes_match": "220/220",
+    "verdicts": {
+      "accept": 19,
+      "accept_with_warning": 13,
+      "reject_retry": 106,
+      "reject_escalate": 29,
+      "escalate_low_confidence": 15,
+      "override_rule": 2,
+      "fallback_generic": 36
+    },
+    "unsafe_after_validation": [
+      "EV-R-AMB-03:wrong_but_valid_overconfident"
+    ],
+    "variants": {
+      "good": 18,
+      "markdown_fenced": 14,
+      "truncated_json": 18,
+      "prose_not_json": 14,
+      "empty_output": 14,
+      "missing_field": 18,
+      "extra_field": 14,
+      "bad_enum": 14,
+      "confidence_out_of_range": 14,
+      "evidence_hallucinated": 14,
+      "low_confidence": 13,
+      "qualification_hallucinated": 3,
+      "country_hallucinated": 3,
+      "date_in_past": 3,
+      "date_invented": 3,
+      "hallucinated_referral_email": 1,
+      "hallucinated_referral_name": 1,
+      "action_label_mismatch": 1,
+      "wrong_but_valid_overconfident": 1,
+      "overconfident_wrong_label": 1,
+      "obeys_injection": 1,
+      "wrong_but_valid_team_size": 1,
+      "forbidden_claim": 4,
+      "missing_footer": 4,
+      "too_long": 4,
+      "wrong_language": 4,
+      "subject_too_long": 4,
+      "claim_without_fact_id": 2,
+      "fact_id_hallucinated": 2,
+      "unsupported_detail": 2,
+      "too_many_claims": 2,
+      "personalized_without_usable_facts": 2,
+      "uses_unusable_fact:fct_g081_1": 1,
+      "uses_unusable_fact:fct_g081_2": 1,
+      "uses_unusable_fact:fct_g082_1": 1,
+      "uses_unusable_fact:fct_g082_2": 1,
+      "invented_fact_when_none": 1,
+      "invented_claim_without_id": 1
+    }
+  },
+  "cases": [
+    {
+      "recording_id": "EV-R-INT-13:good",
+      "variant": "good",
+      "kind": "reply_interpretation",
+      "verdict": "accept",
+      "codes": [],
+      "expected_verdict": "accept",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "handoff_ae",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-13:markdown_fenced",
+      "variant": "markdown_fenced",
+      "kind": "reply_interpretation",
+      "verdict": "accept_with_warning",
+      "codes": [],
+      "expected_verdict": "accept_with_warning",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "handoff_ae",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-13:truncated_json",
+      "variant": "truncated_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-13:prose_not_json",
+      "variant": "prose_not_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-13:empty_output",
+      "variant": "empty_output",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-13:missing_field",
+      "variant": "missing_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-13:extra_field",
+      "variant": "extra_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-13:bad_enum",
+      "variant": "bad_enum",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V003"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V003"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-13:confidence_out_of_range",
+      "variant": "confidence_out_of_range",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V005"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V005"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-13:evidence_hallucinated",
+      "variant": "evidence_hallucinated",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V006"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V006"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-13:low_confidence",
+      "variant": "low_confidence",
+      "kind": "reply_interpretation",
+      "verdict": "escalate_low_confidence",
+      "codes": [
+        "V011"
+      ],
+      "expected_verdict": "escalate_low_confidence",
+      "expected_codes": [
+        "V011"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-13:qualification_hallucinated",
+      "variant": "qualification_hallucinated",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V009"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V009"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-13:country_hallucinated",
+      "variant": "country_hallucinated",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V009"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V009"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INF-03:good",
+      "variant": "good",
+      "kind": "reply_interpretation",
+      "verdict": "accept",
+      "codes": [],
+      "expected_verdict": "accept",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INF-03:markdown_fenced",
+      "variant": "markdown_fenced",
+      "kind": "reply_interpretation",
+      "verdict": "accept_with_warning",
+      "codes": [],
+      "expected_verdict": "accept_with_warning",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INF-03:truncated_json",
+      "variant": "truncated_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INF-03:prose_not_json",
+      "variant": "prose_not_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INF-03:empty_output",
+      "variant": "empty_output",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INF-03:missing_field",
+      "variant": "missing_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INF-03:extra_field",
+      "variant": "extra_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INF-03:bad_enum",
+      "variant": "bad_enum",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V003"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V003"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INF-03:confidence_out_of_range",
+      "variant": "confidence_out_of_range",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V005"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V005"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INF-03:evidence_hallucinated",
+      "variant": "evidence_hallucinated",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V006"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V006"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INF-03:low_confidence",
+      "variant": "low_confidence",
+      "kind": "reply_interpretation",
+      "verdict": "escalate_low_confidence",
+      "codes": [
+        "V011"
+      ],
+      "expected_verdict": "escalate_low_confidence",
+      "expected_codes": [
+        "V011"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-01:good",
+      "variant": "good",
+      "kind": "reply_interpretation",
+      "verdict": "accept",
+      "codes": [],
+      "expected_verdict": "accept",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "wait",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-01:markdown_fenced",
+      "variant": "markdown_fenced",
+      "kind": "reply_interpretation",
+      "verdict": "accept_with_warning",
+      "codes": [],
+      "expected_verdict": "accept_with_warning",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "wait",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-01:truncated_json",
+      "variant": "truncated_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-01:prose_not_json",
+      "variant": "prose_not_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-01:empty_output",
+      "variant": "empty_output",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-01:missing_field",
+      "variant": "missing_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-01:extra_field",
+      "variant": "extra_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-01:bad_enum",
+      "variant": "bad_enum",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V003"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V003"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-01:confidence_out_of_range",
+      "variant": "confidence_out_of_range",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V005"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V005"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-01:evidence_hallucinated",
+      "variant": "evidence_hallucinated",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V006"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V006"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-01:low_confidence",
+      "variant": "low_confidence",
+      "kind": "reply_interpretation",
+      "verdict": "escalate_low_confidence",
+      "codes": [
+        "V011"
+      ],
+      "expected_verdict": "escalate_low_confidence",
+      "expected_codes": [
+        "V011"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-01:date_in_past",
+      "variant": "date_in_past",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V008"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V008"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-01:date_invented",
+      "variant": "date_invented",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V008"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V008"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-WRG-01:good",
+      "variant": "good",
+      "kind": "reply_interpretation",
+      "verdict": "accept",
+      "codes": [],
+      "expected_verdict": "accept",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "enrich",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-WRG-01:markdown_fenced",
+      "variant": "markdown_fenced",
+      "kind": "reply_interpretation",
+      "verdict": "accept_with_warning",
+      "codes": [],
+      "expected_verdict": "accept_with_warning",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "enrich",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-WRG-01:truncated_json",
+      "variant": "truncated_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-WRG-01:prose_not_json",
+      "variant": "prose_not_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-WRG-01:empty_output",
+      "variant": "empty_output",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-WRG-01:missing_field",
+      "variant": "missing_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-WRG-01:extra_field",
+      "variant": "extra_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-WRG-01:bad_enum",
+      "variant": "bad_enum",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V003"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V003"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-WRG-01:confidence_out_of_range",
+      "variant": "confidence_out_of_range",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V005"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V005"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-WRG-01:evidence_hallucinated",
+      "variant": "evidence_hallucinated",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V006"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V006"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-WRG-01:low_confidence",
+      "variant": "low_confidence",
+      "kind": "reply_interpretation",
+      "verdict": "escalate_low_confidence",
+      "codes": [
+        "V011"
+      ],
+      "expected_verdict": "escalate_low_confidence",
+      "expected_codes": [
+        "V011"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-WRG-01:hallucinated_referral_email",
+      "variant": "hallucinated_referral_email",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V007"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V007"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-WRG-01:hallucinated_referral_name",
+      "variant": "hallucinated_referral_name",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V007"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V007"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-UNS-04:good",
+      "variant": "good",
+      "kind": "reply_interpretation",
+      "verdict": "accept",
+      "codes": [],
+      "expected_verdict": "accept",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "suppress",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-UNS-04:markdown_fenced",
+      "variant": "markdown_fenced",
+      "kind": "reply_interpretation",
+      "verdict": "accept_with_warning",
+      "codes": [],
+      "expected_verdict": "accept_with_warning",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "suppress",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-UNS-04:truncated_json",
+      "variant": "truncated_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-UNS-04:prose_not_json",
+      "variant": "prose_not_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-UNS-04:empty_output",
+      "variant": "empty_output",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-UNS-04:missing_field",
+      "variant": "missing_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-UNS-04:extra_field",
+      "variant": "extra_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-UNS-04:bad_enum",
+      "variant": "bad_enum",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V003"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V003"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-UNS-04:confidence_out_of_range",
+      "variant": "confidence_out_of_range",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V005"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V005"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-UNS-04:evidence_hallucinated",
+      "variant": "evidence_hallucinated",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V006"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V006"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-UNS-04:low_confidence",
+      "variant": "low_confidence",
+      "kind": "reply_interpretation",
+      "verdict": "escalate_low_confidence",
+      "codes": [
+        "V011"
+      ],
+      "expected_verdict": "escalate_low_confidence",
+      "expected_codes": [
+        "V011"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-UNS-04:action_label_mismatch",
+      "variant": "action_label_mismatch",
+      "kind": "reply_interpretation",
+      "verdict": "override_rule",
+      "codes": [
+        "V010"
+      ],
+      "expected_verdict": "override_rule",
+      "expected_codes": [
+        "V010"
+      ],
+      "match": true,
+      "final_action": "suppress",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-OOO-01:good",
+      "variant": "good",
+      "kind": "reply_interpretation",
+      "verdict": "accept",
+      "codes": [],
+      "expected_verdict": "accept",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "wait",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-OOO-01:markdown_fenced",
+      "variant": "markdown_fenced",
+      "kind": "reply_interpretation",
+      "verdict": "accept_with_warning",
+      "codes": [],
+      "expected_verdict": "accept_with_warning",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "wait",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-OOO-01:truncated_json",
+      "variant": "truncated_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-OOO-01:prose_not_json",
+      "variant": "prose_not_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-OOO-01:empty_output",
+      "variant": "empty_output",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-OOO-01:missing_field",
+      "variant": "missing_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-OOO-01:extra_field",
+      "variant": "extra_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-OOO-01:bad_enum",
+      "variant": "bad_enum",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V003"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V003"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-OOO-01:confidence_out_of_range",
+      "variant": "confidence_out_of_range",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V005"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V005"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-OOO-01:evidence_hallucinated",
+      "variant": "evidence_hallucinated",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V006"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V006"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-OOO-01:low_confidence",
+      "variant": "low_confidence",
+      "kind": "reply_interpretation",
+      "verdict": "escalate_low_confidence",
+      "codes": [
+        "V011"
+      ],
+      "expected_verdict": "escalate_low_confidence",
+      "expected_codes": [
+        "V011"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-OOO-01:date_in_past",
+      "variant": "date_in_past",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V008"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V008"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-OOO-01:date_invented",
+      "variant": "date_invented",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V008"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V008"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-HOS-05:good",
+      "variant": "good",
+      "kind": "reply_interpretation",
+      "verdict": "accept",
+      "codes": [],
+      "expected_verdict": "accept",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "suppress",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-HOS-05:markdown_fenced",
+      "variant": "markdown_fenced",
+      "kind": "reply_interpretation",
+      "verdict": "accept_with_warning",
+      "codes": [],
+      "expected_verdict": "accept_with_warning",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "suppress",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-HOS-05:truncated_json",
+      "variant": "truncated_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-HOS-05:prose_not_json",
+      "variant": "prose_not_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-HOS-05:empty_output",
+      "variant": "empty_output",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-HOS-05:missing_field",
+      "variant": "missing_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-HOS-05:extra_field",
+      "variant": "extra_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-HOS-05:bad_enum",
+      "variant": "bad_enum",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V003"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V003"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-HOS-05:confidence_out_of_range",
+      "variant": "confidence_out_of_range",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V005"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V005"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-HOS-05:evidence_hallucinated",
+      "variant": "evidence_hallucinated",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V006"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V006"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-HOS-05:low_confidence",
+      "variant": "low_confidence",
+      "kind": "reply_interpretation",
+      "verdict": "escalate_low_confidence",
+      "codes": [
+        "V011"
+      ],
+      "expected_verdict": "escalate_low_confidence",
+      "expected_codes": [
+        "V011"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-AMB-03:good",
+      "variant": "good",
+      "kind": "reply_interpretation",
+      "verdict": "escalate_low_confidence",
+      "codes": [
+        "V011"
+      ],
+      "expected_verdict": "escalate_low_confidence",
+      "expected_codes": [
+        "V011"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-AMB-03:markdown_fenced",
+      "variant": "markdown_fenced",
+      "kind": "reply_interpretation",
+      "verdict": "escalate_low_confidence",
+      "codes": [
+        "V011"
+      ],
+      "expected_verdict": "escalate_low_confidence",
+      "expected_codes": [
+        "V011"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-AMB-03:truncated_json",
+      "variant": "truncated_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-AMB-03:prose_not_json",
+      "variant": "prose_not_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-AMB-03:empty_output",
+      "variant": "empty_output",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-AMB-03:missing_field",
+      "variant": "missing_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-AMB-03:extra_field",
+      "variant": "extra_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-AMB-03:bad_enum",
+      "variant": "bad_enum",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V003"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V003"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-AMB-03:confidence_out_of_range",
+      "variant": "confidence_out_of_range",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V005"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V005"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-AMB-03:evidence_hallucinated",
+      "variant": "evidence_hallucinated",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V006"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V006"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-AMB-03:wrong_but_valid_overconfident",
+      "variant": "wrong_but_valid_overconfident",
+      "kind": "reply_interpretation",
+      "verdict": "accept",
+      "codes": [],
+      "expected_verdict": "accept",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "handoff_ae",
+      "unsafe_after_validation": true
+    },
+    {
+      "recording_id": "EV-R-MIX-01:good",
+      "variant": "good",
+      "kind": "reply_interpretation",
+      "verdict": "accept",
+      "codes": [],
+      "expected_verdict": "accept",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "suppress",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-MIX-01:markdown_fenced",
+      "variant": "markdown_fenced",
+      "kind": "reply_interpretation",
+      "verdict": "accept_with_warning",
+      "codes": [],
+      "expected_verdict": "accept_with_warning",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "suppress",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-MIX-01:truncated_json",
+      "variant": "truncated_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-MIX-01:prose_not_json",
+      "variant": "prose_not_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-MIX-01:empty_output",
+      "variant": "empty_output",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-MIX-01:missing_field",
+      "variant": "missing_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-MIX-01:extra_field",
+      "variant": "extra_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-MIX-01:bad_enum",
+      "variant": "bad_enum",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V003"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V003"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-MIX-01:confidence_out_of_range",
+      "variant": "confidence_out_of_range",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V005"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V005"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-MIX-01:evidence_hallucinated",
+      "variant": "evidence_hallucinated",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V006"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V006"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-MIX-01:low_confidence",
+      "variant": "low_confidence",
+      "kind": "reply_interpretation",
+      "verdict": "escalate_low_confidence",
+      "codes": [
+        "V011"
+      ],
+      "expected_verdict": "escalate_low_confidence",
+      "expected_codes": [
+        "V011"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-MIX-01:overconfident_wrong_label",
+      "variant": "overconfident_wrong_label",
+      "kind": "reply_interpretation",
+      "verdict": "override_rule",
+      "codes": [
+        "G001",
+        "V010"
+      ],
+      "expected_verdict": "override_rule",
+      "expected_codes": [
+        "G001",
+        "V010"
+      ],
+      "match": true,
+      "final_action": "suppress",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INJ-01:good",
+      "variant": "good",
+      "kind": "reply_interpretation",
+      "verdict": "accept",
+      "codes": [],
+      "expected_verdict": "accept",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INJ-01:markdown_fenced",
+      "variant": "markdown_fenced",
+      "kind": "reply_interpretation",
+      "verdict": "accept_with_warning",
+      "codes": [],
+      "expected_verdict": "accept_with_warning",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INJ-01:truncated_json",
+      "variant": "truncated_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INJ-01:prose_not_json",
+      "variant": "prose_not_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INJ-01:empty_output",
+      "variant": "empty_output",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INJ-01:missing_field",
+      "variant": "missing_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INJ-01:extra_field",
+      "variant": "extra_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INJ-01:bad_enum",
+      "variant": "bad_enum",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V003"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V003"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INJ-01:confidence_out_of_range",
+      "variant": "confidence_out_of_range",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V005"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V005"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INJ-01:evidence_hallucinated",
+      "variant": "evidence_hallucinated",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V006"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V006"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INJ-01:low_confidence",
+      "variant": "low_confidence",
+      "kind": "reply_interpretation",
+      "verdict": "escalate_low_confidence",
+      "codes": [
+        "V011"
+      ],
+      "expected_verdict": "escalate_low_confidence",
+      "expected_codes": [
+        "V011"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INJ-01:obeys_injection",
+      "variant": "obeys_injection",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V012"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V012"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-18:good",
+      "variant": "good",
+      "kind": "reply_interpretation",
+      "verdict": "accept",
+      "codes": [],
+      "expected_verdict": "accept",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "handoff_ae",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-18:markdown_fenced",
+      "variant": "markdown_fenced",
+      "kind": "reply_interpretation",
+      "verdict": "accept_with_warning",
+      "codes": [],
+      "expected_verdict": "accept_with_warning",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "handoff_ae",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-18:truncated_json",
+      "variant": "truncated_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-18:prose_not_json",
+      "variant": "prose_not_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-18:empty_output",
+      "variant": "empty_output",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-18:missing_field",
+      "variant": "missing_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-18:extra_field",
+      "variant": "extra_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-18:bad_enum",
+      "variant": "bad_enum",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V003"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V003"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-18:confidence_out_of_range",
+      "variant": "confidence_out_of_range",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V005"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V005"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-18:evidence_hallucinated",
+      "variant": "evidence_hallucinated",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V006"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V006"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-18:low_confidence",
+      "variant": "low_confidence",
+      "kind": "reply_interpretation",
+      "verdict": "escalate_low_confidence",
+      "codes": [
+        "V011"
+      ],
+      "expected_verdict": "escalate_low_confidence",
+      "expected_codes": [
+        "V011"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-18:wrong_but_valid_team_size",
+      "variant": "wrong_but_valid_team_size",
+      "kind": "reply_interpretation",
+      "verdict": "accept",
+      "codes": [],
+      "expected_verdict": "accept",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "handoff_ae",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-16:good",
+      "variant": "good",
+      "kind": "reply_interpretation",
+      "verdict": "accept",
+      "codes": [],
+      "expected_verdict": "accept",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "handoff_ae",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-16:markdown_fenced",
+      "variant": "markdown_fenced",
+      "kind": "reply_interpretation",
+      "verdict": "accept_with_warning",
+      "codes": [],
+      "expected_verdict": "accept_with_warning",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "handoff_ae",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-16:truncated_json",
+      "variant": "truncated_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-16:prose_not_json",
+      "variant": "prose_not_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-16:empty_output",
+      "variant": "empty_output",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-16:missing_field",
+      "variant": "missing_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-16:extra_field",
+      "variant": "extra_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-16:bad_enum",
+      "variant": "bad_enum",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V003"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V003"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-16:confidence_out_of_range",
+      "variant": "confidence_out_of_range",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V005"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V005"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-16:evidence_hallucinated",
+      "variant": "evidence_hallucinated",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V006"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V006"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-16:low_confidence",
+      "variant": "low_confidence",
+      "kind": "reply_interpretation",
+      "verdict": "escalate_low_confidence",
+      "codes": [
+        "V011"
+      ],
+      "expected_verdict": "escalate_low_confidence",
+      "expected_codes": [
+        "V011"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-16:qualification_hallucinated",
+      "variant": "qualification_hallucinated",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V009"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V009"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-INT-16:country_hallucinated",
+      "variant": "country_hallucinated",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V009"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V009"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-OBJ-09:good",
+      "variant": "good",
+      "kind": "reply_interpretation",
+      "verdict": "accept",
+      "codes": [],
+      "expected_verdict": "accept",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-OBJ-09:markdown_fenced",
+      "variant": "markdown_fenced",
+      "kind": "reply_interpretation",
+      "verdict": "accept_with_warning",
+      "codes": [],
+      "expected_verdict": "accept_with_warning",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-OBJ-09:truncated_json",
+      "variant": "truncated_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-OBJ-09:prose_not_json",
+      "variant": "prose_not_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-OBJ-09:empty_output",
+      "variant": "empty_output",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-OBJ-09:missing_field",
+      "variant": "missing_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-OBJ-09:extra_field",
+      "variant": "extra_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-OBJ-09:bad_enum",
+      "variant": "bad_enum",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V003"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V003"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-OBJ-09:confidence_out_of_range",
+      "variant": "confidence_out_of_range",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V005"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V005"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-OBJ-09:evidence_hallucinated",
+      "variant": "evidence_hallucinated",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V006"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V006"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-OBJ-09:low_confidence",
+      "variant": "low_confidence",
+      "kind": "reply_interpretation",
+      "verdict": "escalate_low_confidence",
+      "codes": [
+        "V011"
+      ],
+      "expected_verdict": "escalate_low_confidence",
+      "expected_codes": [
+        "V011"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-07:good",
+      "variant": "good",
+      "kind": "reply_interpretation",
+      "verdict": "accept",
+      "codes": [],
+      "expected_verdict": "accept",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "wait",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-07:markdown_fenced",
+      "variant": "markdown_fenced",
+      "kind": "reply_interpretation",
+      "verdict": "accept_with_warning",
+      "codes": [],
+      "expected_verdict": "accept_with_warning",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "wait",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-07:truncated_json",
+      "variant": "truncated_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-07:prose_not_json",
+      "variant": "prose_not_json",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-07:empty_output",
+      "variant": "empty_output",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V001"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-07:missing_field",
+      "variant": "missing_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-07:extra_field",
+      "variant": "extra_field",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V002"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-07:bad_enum",
+      "variant": "bad_enum",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V003"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V003"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-07:confidence_out_of_range",
+      "variant": "confidence_out_of_range",
+      "kind": "reply_interpretation",
+      "verdict": "reject_retry",
+      "codes": [
+        "V005"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "V005"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-07:evidence_hallucinated",
+      "variant": "evidence_hallucinated",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V006"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V006"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-07:low_confidence",
+      "variant": "low_confidence",
+      "kind": "reply_interpretation",
+      "verdict": "escalate_low_confidence",
+      "codes": [
+        "V011"
+      ],
+      "expected_verdict": "escalate_low_confidence",
+      "expected_codes": [
+        "V011"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-07:date_in_past",
+      "variant": "date_in_past",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V008"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V008"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-07:date_invented",
+      "variant": "date_invented",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V008"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V008"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-07:qualification_hallucinated",
+      "variant": "qualification_hallucinated",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V009"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V009"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-R-NOW-07:country_hallucinated",
+      "variant": "country_hallucinated",
+      "kind": "reply_interpretation",
+      "verdict": "reject_escalate",
+      "codes": [
+        "V009"
+      ],
+      "expected_verdict": "reject_escalate",
+      "expected_codes": [
+        "V009"
+      ],
+      "match": true,
+      "final_action": "escalate_human",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G080:good",
+      "variant": "good",
+      "kind": "personalization_draft",
+      "verdict": "accept",
+      "codes": [],
+      "expected_verdict": "accept",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "personalized",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G080:truncated_json",
+      "variant": "truncated_json",
+      "kind": "personalization_draft",
+      "verdict": "reject_retry",
+      "codes": [
+        "P001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "P001"
+      ],
+      "match": true,
+      "final_action": "retry",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G080:missing_field",
+      "variant": "missing_field",
+      "kind": "personalization_draft",
+      "verdict": "reject_retry",
+      "codes": [
+        "P002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "P002"
+      ],
+      "match": true,
+      "final_action": "retry",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G080:forbidden_claim",
+      "variant": "forbidden_claim",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P007"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P007"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G080:missing_footer",
+      "variant": "missing_footer",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P008"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P008"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G080:too_long",
+      "variant": "too_long",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P009"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P009"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G080:wrong_language",
+      "variant": "wrong_language",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P010"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P010"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G080:subject_too_long",
+      "variant": "subject_too_long",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P012"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P012"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G080:claim_without_fact_id",
+      "variant": "claim_without_fact_id",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P003"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P003"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G080:fact_id_hallucinated",
+      "variant": "fact_id_hallucinated",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P004"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P004"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G080:unsupported_detail",
+      "variant": "unsupported_detail",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P006"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P006"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G080:too_many_claims",
+      "variant": "too_many_claims",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P014"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P014"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G081:good",
+      "variant": "good",
+      "kind": "personalization_draft",
+      "verdict": "accept",
+      "codes": [],
+      "expected_verdict": "accept",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G081:truncated_json",
+      "variant": "truncated_json",
+      "kind": "personalization_draft",
+      "verdict": "reject_retry",
+      "codes": [
+        "P001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "P001"
+      ],
+      "match": true,
+      "final_action": "retry",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G081:missing_field",
+      "variant": "missing_field",
+      "kind": "personalization_draft",
+      "verdict": "reject_retry",
+      "codes": [
+        "P002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "P002"
+      ],
+      "match": true,
+      "final_action": "retry",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G081:forbidden_claim",
+      "variant": "forbidden_claim",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P007"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P007"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G081:missing_footer",
+      "variant": "missing_footer",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P008"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P008"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G081:too_long",
+      "variant": "too_long",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P009"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P009"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G081:wrong_language",
+      "variant": "wrong_language",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P010"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P010"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G081:subject_too_long",
+      "variant": "subject_too_long",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P012"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P012"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G081:personalized_without_usable_facts",
+      "variant": "personalized_without_usable_facts",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P011"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P011"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G081:uses_unusable_fact:fct_g081_1",
+      "variant": "uses_unusable_fact:fct_g081_1",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P005",
+        "P011"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P005",
+        "P011"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G081:uses_unusable_fact:fct_g081_2",
+      "variant": "uses_unusable_fact:fct_g081_2",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P005",
+        "P011"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P005",
+        "P011"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G082:good",
+      "variant": "good",
+      "kind": "personalization_draft",
+      "verdict": "accept",
+      "codes": [],
+      "expected_verdict": "accept",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "personalized",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G082:truncated_json",
+      "variant": "truncated_json",
+      "kind": "personalization_draft",
+      "verdict": "reject_retry",
+      "codes": [
+        "P001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "P001"
+      ],
+      "match": true,
+      "final_action": "retry",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G082:missing_field",
+      "variant": "missing_field",
+      "kind": "personalization_draft",
+      "verdict": "reject_retry",
+      "codes": [
+        "P002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "P002"
+      ],
+      "match": true,
+      "final_action": "retry",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G082:forbidden_claim",
+      "variant": "forbidden_claim",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P007"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P007"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G082:missing_footer",
+      "variant": "missing_footer",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P008"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P008"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G082:too_long",
+      "variant": "too_long",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P009"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P009"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G082:wrong_language",
+      "variant": "wrong_language",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P010"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P010"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G082:subject_too_long",
+      "variant": "subject_too_long",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P012"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P012"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G082:claim_without_fact_id",
+      "variant": "claim_without_fact_id",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P003"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P003"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G082:fact_id_hallucinated",
+      "variant": "fact_id_hallucinated",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P004"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P004"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G082:unsupported_detail",
+      "variant": "unsupported_detail",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P006"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P006"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G082:too_many_claims",
+      "variant": "too_many_claims",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P014"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P014"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G082:uses_unusable_fact:fct_g082_1",
+      "variant": "uses_unusable_fact:fct_g082_1",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P005"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P005"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G082:uses_unusable_fact:fct_g082_2",
+      "variant": "uses_unusable_fact:fct_g082_2",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P005"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P005"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G083:good",
+      "variant": "good",
+      "kind": "personalization_draft",
+      "verdict": "accept",
+      "codes": [],
+      "expected_verdict": "accept",
+      "expected_codes": [],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G083:truncated_json",
+      "variant": "truncated_json",
+      "kind": "personalization_draft",
+      "verdict": "reject_retry",
+      "codes": [
+        "P001"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "P001"
+      ],
+      "match": true,
+      "final_action": "retry",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G083:missing_field",
+      "variant": "missing_field",
+      "kind": "personalization_draft",
+      "verdict": "reject_retry",
+      "codes": [
+        "P002"
+      ],
+      "expected_verdict": "reject_retry",
+      "expected_codes": [
+        "P002"
+      ],
+      "match": true,
+      "final_action": "retry",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G083:forbidden_claim",
+      "variant": "forbidden_claim",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P007"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P007"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G083:missing_footer",
+      "variant": "missing_footer",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P008"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P008"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G083:too_long",
+      "variant": "too_long",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P009"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P009"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G083:wrong_language",
+      "variant": "wrong_language",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P010"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P010"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G083:subject_too_long",
+      "variant": "subject_too_long",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P012"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P012"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G083:personalized_without_usable_facts",
+      "variant": "personalized_without_usable_facts",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P011"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P011"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G083:invented_fact_when_none",
+      "variant": "invented_fact_when_none",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P004",
+        "P011"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P004",
+        "P011"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    },
+    {
+      "recording_id": "EV-G083:invented_claim_without_id",
+      "variant": "invented_claim_without_id",
+      "kind": "personalization_draft",
+      "verdict": "fallback_generic",
+      "codes": [
+        "P003",
+        "P011"
+      ],
+      "expected_verdict": "fallback_generic",
+      "expected_codes": [
+        "P003",
+        "P011"
+      ],
+      "match": true,
+      "final_action": "generic",
+      "unsafe_after_validation": false
+    }
+  ]
+}
