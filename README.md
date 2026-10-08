@@ -62,6 +62,9 @@ they call a Netlify function.
 
 ## What the challenge asks, and where to see it
 
+<details>
+<summary>Show the table</summary>
+
 | The challenge asks for | Where to see it on the site | Where it is proven |
 |---|---|---|
 | Events that trigger the system | Every journey in *Live Demo → Scenarios* starts with a webhook; *Operations → Event stream* | `orchestrator serve`, intake tests |
@@ -79,6 +82,8 @@ they call a Netlify function.
 | How impact would be measured | *Command Center → Measuring impact* | [measurement plan](growth-orchestrator/docs/MEASUREMENT_PLAN.md) |
 
 The full map, requirement by requirement, is in [growth-orchestrator/data/TRACEABILITY.md](growth-orchestrator/data/TRACEABILITY.md).
+
+</details>
 
 ## Architecture
 
@@ -125,6 +130,9 @@ What I did not build, where I did not use AI, the biggest tradeoff and the bigge
 
 ## Section by section
 
+<details>
+<summary>Show the table</summary>
+
 Follow the left menu. Every view says whether what you see is **recorded** (a stored run of the real engine), **simulated** (a
 stand-in or an assumption) or **live** (the real model, called when you press a button).
 
@@ -142,6 +150,8 @@ stand-in or an assumption) or **live** (the real model, called when you press a 
 | **Operations → Metrics** | The whole month of events as operating numbers. | Automation and review rates, failures, duplicates ignored, dead letters and the AI cost assumption (an offline stand-in for the model, so this measures the safety layer, not a real model). |
 | **Operations → Event stream** | All 561 deliveries of the 500-account sample, including duplicates, garbage, late events and every mock failure, through one engine instance. | How many decisions match the independent answer key (561 of 561), how each delivery was handled and what it ended as, and how many items went to a person or to the dead-letter queue. |
 | **Architecture** | How the pieces fit and how this meets the challenge. | The diagram, a table of every requirement and where to see it and where it is proven, the 89 situations behind the tests and the reference flows. |
+
+</details>
 
 ## What is real, simulated and live
 
