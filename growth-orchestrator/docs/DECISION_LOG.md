@@ -59,6 +59,8 @@ I did not change it. In production I would validate that priority with Sales and
 cooldown should come first, to avoid contacting an account again too soon after a loss. Moving it is a one-line reorder in
 `orchestrator/rules.py` and `generator/oracle.py`; its effect can be measured on the same 50k stream before adopting it.
 
+My position: this can be phase 2. I did consider it, and I left it out of this slice on purpose, because the order is a business priority to agree with Sales and Growth, not a technical fault.
+
 ## If an assumption changes
 
 Policy numbers are configuration, not code, so most changes are a config edit plus a re-run of the tests and of
