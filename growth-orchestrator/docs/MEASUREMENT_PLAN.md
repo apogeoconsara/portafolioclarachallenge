@@ -26,7 +26,7 @@ value on top of that instead of riding on it.
 - **Assignment:** stratified by country × employee band × prior touch, deterministic hash within stratum
   (`data/generated/experiment_assignments.jsonl`), 50/50.
 - **Group A (control):** today's process. **Group B (treatment):** the orchestrator, with people on the review queue and on the
-  approval of outreach emails (first contacts and follow-ups).
+  approval of outreach emails (first emails and follow-ups).
 - **Rollout:** group B does not start at full volume. It starts small (for example 10%, 25%, 50%, then 100% of planned volume)
   and each increase passes a gate that checks the guardrails (see Stop rules). The schedule is a design choice, to be set with
   Clara's real deliverability data.

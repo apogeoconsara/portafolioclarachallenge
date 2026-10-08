@@ -53,7 +53,7 @@ ASSUMPTIONS = {
                "allocation": "50/50", "duration_weeks": 8, "analysis": "intention-to-treat on all targeted accounts",
                "attribution_window_days": 60, "contamination_control": "assignment by domain cluster; AEs see no arm labels",
                "novelty_check": "compare weeks 1-2 vs 5-8", "pre_registered": True,
-               "stop_rules": "stop treatment on any guardrail breach in two consecutive weeks"},
+               "stop_rules": "each week every guardrail is read with its 95% interval: GO when the interval is below the limit, HOLD when it touches it, PAUSE when it is entirely above the limit or the limit is broken two weeks in a row; a policy violation or an unsafe AI action pauses at once"},
 }
 
 

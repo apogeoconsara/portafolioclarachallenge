@@ -121,7 +121,7 @@ The site is static plus one function, published by Netlify from `main` (`netlify
 
 ## What the page shows
 
-The [root README](../README.md#quick-tour-for-reviewers-about-5-minutes) has a table with what each section of the page does and
+The [root README](../README.md#section-by-section) has a table with what each section of the page does and
 what to look at in it.
 
 ## Status and open items

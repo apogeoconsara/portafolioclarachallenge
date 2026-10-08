@@ -1,6 +1,7 @@
 """Measurement-plan worked example on the SIMULATED experiment (all numbers rest on impact.ASSUMPTIONS)."""
 from __future__ import annotations
 
+import math
 from pathlib import Path
 
 from . import impact
@@ -11,6 +12,14 @@ from .util import read_jsonl
 def _rate(rows, field, denom_field=None):
     d = [r for r in rows if (r[denom_field] if denom_field else True)]
     return sum(r[field] for r in d) / max(1, len(d))
+
+
+def _wilson(k, n, z=1.96):
+    if n == 0:
+        return 0.0, 1.0
+    p, d = k / n, 1 + z * z / n
+    c, a = p + z * z / (2 * n), z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n))
+    return (c - a) / d, (c + a) / d
 
 
 def render(d: Path, aa_runs: int = 40) -> str:
@@ -47,15 +56,16 @@ def render(d: Path, aa_runs: int = 40) -> str:
               f"Eligible accounts reached: control {_rate([r for r in C if r['eligible']], 'contacted'):.0%} vs treatment "
               f"{_rate([r for r in T if r['eligible']], 'contacted'):.0%}; the per-touch reply rate is assumed *lower* for AI-assisted outreach "
               f"({A['treatment']['p_reply']:.1%} vs {A['control']['p_reply']:.1%}). If real coverage gains are smaller, the incremental pipeline shrinks accordingly.\n")
-    md.append("## Guardrails\n\n| guardrail | control | treatment | limit | status |\n|---|---|---|---|---|")
+    md.append("## Guardrails\n\n| guardrail | control | treatment | 95% interval (treatment) | limit | status |\n|---|---|---|---|---|---|")
     g = A["guardrails"]
     for name, f, lim in (("unsubscribe rate", "unsubscribed", g["unsubscribe_rate_max"]),
                          ("spam complaint rate", "complaint", g["spam_complaint_rate_max"]),
                          ("hard bounce rate", "hard_bounce", g["hard_bounce_rate_max"])):
         t, c = _rate(T, f, "contacted"), _rate(C, f, "contacted")
-        md.append(f"| {name} | {c:.2%} | {t:.2%} | ≤ {lim:.2%} | {'OK' if t <= lim else 'BREACH'} |")
+        lo, hi = _wilson(sum(r[f] for r in T if r["contacted"]), sum(1 for r in T if r["contacted"]))
+        md.append(f"| {name} | {c:.2%} | {t:.2%} | {lo:.2%} to {hi:.2%} | ≤ {lim:.2%} | {'GO' if hi < lim else ('PAUSE' if lo > lim else 'HOLD')} |")
     vt, vc = sum(r["violation"] for r in T), sum(r["violation"] for r in C)
-    md.append(f"| policy violations (contacted an ineligible account) | {vc} | {vt} | 0 in treatment | {'OK' if vt == 0 else 'BREACH'} |")
+    md.append(f"| policy violations (contacted an ineligible account) | {vc} | {vt} | n/a | 0 in treatment | {'GO' if vt == 0 else 'PAUSE'} |")
     sql_c = sum(r["sql"] for r in C) or 1
     sql_t = sum(r["sql"] for r in T) or 1
     ue = A["unit_economics_usd"]

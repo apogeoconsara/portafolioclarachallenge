@@ -13,6 +13,26 @@ named person approves it, and goes only to a simulated log: **nothing is ever se
 
 **Live site:** https://clara-growth-orchestration.netlify.app
 
+## The idea in one minute
+
+A growth team that targets thousands of companies a month cannot look at each one. Someone has to decide, account by account, whether
+it is safe to contact, who should do it and what to say, and that slow, repetitive work is where mistakes happen: a customer gets a
+cold email, an opt-out is ignored, the same message goes out twice.
+
+This system takes that decision over, and keeps people for the cases that need judgment:
+
+- **It listens to events** (a company is targeted, a prospect replies, an email bounces) and keeps each company's state.
+- **Rules decide**: who is eligible, what the next best action is, which sales exec gets the account, and when. They are plain,
+  testable and the same every time. A score picks the track among eligible companies: a personal outreach email, or the slower
+  nurture path.
+- **The AI helps in two small places**: it reads a prospect's reply (what they meant, what they stated) and it writes one opening
+  line from a verified fact. Its answers are checked before anything uses them; if a check fails, the account goes to a person or
+  gets the approved template.
+- **A person approves every outreach email.** Nothing is ever sent: even an approved email goes only to a simulated log.
+- **Everything is audited**, so any decision can be traced back to the event, the rule and the score version behind it.
+
+The rest of this page says where to see each piece.
+
 ## Start here
 
 - **2 minutes.** Open the site. *Command Center* runs the whole month by itself in 25 seconds and ends on what it means for the

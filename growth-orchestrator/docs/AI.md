@@ -68,6 +68,7 @@ the generic approved template.
 Model `claude-haiku-4-5-20251001`, started from the page's "Run the live eval" button, so each case went through the
 Netlify function: one call per case, one run. Files: `evals/results/live-claude-haiku-4-5-20251001-20261007T010623Z.json`
 (the page's download, unmodified), its `.md` summary, and `latest-live.json`, which the page shows as "last saved live run".
+This run predates `temperature: 0` (calls now set it, in the Python client and in the Netlify function), so it has to be repeated, several times, and read as a range.
 
 | 14 replies + 4 drafts | first live run | this run |
 |---|---|---|

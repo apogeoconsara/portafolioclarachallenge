@@ -84,8 +84,8 @@ real data about anyone. Every time I run it with the same parameters it produces
    but equally valid world. It makes results **reproducible**: everyone sees the same data.
 2. **The "seed" files (`data/seed/`).** The curated files (test cases, templates, example replies). They were drafted with an AI
    assistant at my request, and **I still need to review them** before presenting (see section 15). They are
-   called seeds because part of the big data "grows" from them. They are stored in git because someone reviewed them; the 300 MB
-   of generated data is not.
+   called seeds because part of the big data "grows" from them. They are stored in git because they are small and
+   the tests need them; the 390 MB of generated data is not.
 
 ---
 
@@ -489,7 +489,7 @@ None of the 27 automatic integrity checks fails today. What I do want to be upfr
 
 ## 13. How I know the data is reliable
 
-**27 automatic checks** over the ~300 MB (`data_profile.md`) and **66 tests** (`tests/`). The most important:
+**27 automatic checks** over the ~390 MB (`data_profile.md`) and **178 tests** (`tests/`). The most important:
 
 | What is verified | Why it matters |
 |---|---|
@@ -529,9 +529,9 @@ growth-orchestrator/
 ├── data/
 │   ├── README.md · POLICY.md · TRACEABILITY.md · DATA_REPORT.md (this file)
 │   ├── reports/          ← data_profile.md (figures) · impact_example.md (simulation)
-│   ├── seed/             ← IN GIT (~2.6 MB, reviewed): seeds, golden set, evals, templates,
+│   ├── seed/             ← IN GIT (~3.7 MB, review pending): seeds, golden set, evals, templates,
 │   │   │                    policies, recorded AI outputs, demo, and sample/ (500 full accounts)
-│   └── generated/        ← NOT IN GIT (~300 MB, regenerated): the full world of 50,000 accounts
+│   └── generated/        ← NOT IN GIT (~390 MB, regenerated): the full world of 50,000 accounts
 │       ├── *.jsonl and growth.sqlite    (what the system sees)
 │       └── truth/                       (the truth: tests only)
 ```
@@ -553,7 +553,7 @@ growth-orchestrator/
 
 ## 16. Where the files are, and how to regenerate and read them
 
-**Important:** the full 50,000-account data (~300 MB) is **not stored in git**. It lives only on the machine that generated it. To
+**Important:** the full 50,000-account data (~390 MB) is **not stored in git**. It lives only on the machine that generated it. To
 analyze it I either (a) open the small sample that is in git, or (b) regenerate the full data on my own computer in about a minute.
 Step-by-step instructions, ready-made queries and a pandas snippet are in **`data/HOW_TO_ANALYZE.md`**.
 
@@ -574,7 +574,7 @@ From `growth-orchestrator/`:
 
 ```bash
 python3 -m generator all --seed 42 --n 50000     # ~1.5 min. Generates everything (incl. CSV) and validates
-python3 -m unittest discover -s tests -t .       # runs the 66 tests
+python3 -m unittest discover -s tests -t .       # runs the 178 tests
 ```
 
 To **look** at the data without programming: open any `.csv` in Excel, or any `.jsonl` in a text editor (one row per line), or
