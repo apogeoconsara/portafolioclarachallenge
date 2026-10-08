@@ -2,7 +2,7 @@
 
 ## 1. Where is it?
 
-The full data (50,000 accounts, ~300 MB) is **not in git**: it is regenerated on demand. What *is* in git, in the repository
+The full data (50,000 accounts, ~390 MB) is **not in git**: it is regenerated on demand. What *is* in git, in the repository
 `apogeoconsara/portafolioclarachallenge` (branch `main`), is a **500-account sample of every table** (JSONL and CSV)
 and all the curated files.
 

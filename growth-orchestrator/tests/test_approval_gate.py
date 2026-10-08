@@ -1,4 +1,4 @@
-"""No first outreach can execute without a person's approval: Draft -> Pending approval -> Approved -> Mock send.
+"""No outreach email can execute without a person's approval: Draft -> Pending approval -> Approved -> Mock send.
 
 The default engine has no approver, so every outreach email stops at `pending_approval`. These tests drive the real engine
 that way (no AutoApprover) and check the gate from both sides: nothing reaches the mock send before approval, and what

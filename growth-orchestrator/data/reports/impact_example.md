@@ -28,12 +28,12 @@ Where the lift comes from in this simulation: **coverage**, not better copy. Eli
 
 ## Guardrails
 
-| guardrail | control | treatment | limit | status |
-|---|---|---|---|---|
-| unsubscribe rate | 0.23% | 0.35% | ≤ 0.60% | OK |
-| spam complaint rate | 0.09% | 0.11% | ≤ 0.10% | BREACH |
-| hard bounce rate | 2.07% | 1.20% | ≤ 3.00% | OK |
-| policy violations (contacted an ineligible account) | 460 | 0 | 0 in treatment | OK |
+| guardrail | control | treatment | 95% interval (treatment) | limit | status |
+|---|---|---|---|---|---|
+| unsubscribe rate | 0.23% | 0.35% | 0.25% to 0.49% | ≤ 0.60% | GO |
+| spam complaint rate | 0.09% | 0.11% | 0.06% to 0.20% | ≤ 0.10% | HOLD |
+| hard bounce rate | 2.07% | 1.20% | 1.00% to 1.43% | ≤ 3.00% | GO |
+| policy violations (contacted an ineligible account) | 460 | 0 | n/a | 0 in treatment | GO |
 
 Cost per SQL (SDR time + AI + enrichment): control USD 1,551 vs treatment USD 208. Median hours to first touch: control 96h vs treatment 2h.
 

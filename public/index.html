@@ -285,7 +285,7 @@ async function load(name) { if (!DATA[name]) DATA[name] = await (await fetch(`da
 // ---------------------------------------------------------------------------------------------------------------
 const VIEWS = {
   async overview() {
-    const [ov, runs, stream, ev, ap, ms, rp] = await Promise.all([load("overview"), load("runs"), load("stream"), load("evals"), load("approvals"), load("measurement"), load("replay")]);
+    const [ov, runs, stream, ev, ap, ms, rp, op] = await Promise.all([load("overview"), load("runs"), load("stream"), load("evals"), load("approvals"), load("measurement"), load("replay"), load("operations")]);
     const aps = apStats(ap);
     const n = runs.scenarios.length, A = outcomeActions(ov), hm = hoursModel(ov);
     const B = { auto: A.contact + (A.nurture || 0) + A.wait + A.enrich, people: A.handoff_ae + A.escalate_human, blocked: A.suppress };
@@ -359,9 +359,9 @@ const VIEWS = {
       </div>
       <div class="card" style="margin-top:12px">
         <h3>Where does the AI fit, and how would we know it helps?</h3>
-        <p class="d" style="margin:0 0 6px">The AI does two small jobs: it <b>reads replies</b> (free text that rules cannot parse) and it <b>writes one opening line</b> from verified facts. Everything else (who to contact, when, which sales rep) is plain rules.</p>
-        <p class="d" style="margin:0 0 6px">The AI has to earn its place. A second step splits group B in two: <b>B1 without AI</b> (rules, approved template, replies read by a person) and <b>B2 with AI</b>. The AI stays only if B2 beats B1 on qualified pipeline <i>and</i> on cost per qualified lead, without breaking a guardrail. If it does not, it is switched off there and the rules keep working.</p>
-        <span class="tag warn">proposed · not simulated · there is no result for the AI yet</span>
+        <p class="d" style="margin:0 0 6px">The AI does two small jobs. It <b>reads replies</b>, which are free text that rules cannot parse, and it <b>personalizes emails</b>: it writes one opening line from a verified fact about the company. That is where it adds value. In the recorded month it wrote the opening line of <b>${fmt(op.ai.by_kind.draft)} of ${fmt(op.final_actions.contact)}</b> outreach drafts (${(100 * op.ai.by_kind.draft / op.final_actions.contact).toFixed(0)}%); the rest use fixed text. Who to contact, when and which sales rep are decided by rules, not by the AI.</p>
+        <p class="d" style="margin:0 0 6px">What is still to be measured is whether those personalized emails also create more qualified pipeline. The comparison above measures the whole system, so it cannot isolate the AI. To do that, group B is split in two: <b>B1 without AI</b> (same rules, approved template, replies read by a person) and <b>B2 with AI</b>. The AI keeps its place in a job only if B2 beats B1 on qualified pipeline <i>and</i> on cost per qualified lead, with no guardrail broken.</p>
+        <span class="tag warn">personalization: recorded run, the model's answer is an offline stand-in</span> <span class="tag warn">effect on pipeline (B1 against B2): proposed, not simulated</span>
       </div>
       <details class="card" style="margin-top:12px"><summary>For analysts: funnel, guardrails with intervals, gradual rollout, safeguard, detection time</summary>
         <h3 style="margin:12px 0 6px">The funnel, per 1,000 companies (simulated)</h3>
@@ -397,7 +397,7 @@ const VIEWS = {
         <div class="card kpi"><div class="v">${esc(ev.recorded.summary.verdict_and_codes_match)}</div><div class="l">AI outputs (good and deliberately broken) judged correctly by the safety checks</div></div>
       </div>
       <details class="card" style="margin-top:14px"><summary>Why ${n} situations? It is not a target</summary>
-        <p class="d" style="margin:8px 0 0">The number is a result, not a goal. We wrote one test situation for each eligibility rule and for each thing the challenge says can go wrong, and that came to ${n}.
+        <p class="d" style="margin:8px 0 0">The number is a result, not a goal. There is one test situation for each eligibility rule and for each thing the challenge says can go wrong, and that came to ${n}.
         ${scenarioGroups(runs).map(([g, c]) => `${c} ${g}`).join(", ")}. Each situation is a case in <span class="mono">golden_scenarios.jsonl</span>, run on a fresh database and compared with the expected decision. Seven would leave rules untested; padding to a round hundred would repeat cases.</p></details>
       <details class="card" style="margin-top:14px"><summary>Where the data and the texts come from</summary>
         <p class="d" style="margin:8px 0 0">Every company, person and event is <b>synthetic</b>: a generator creates the 50,000-company world from a fixed seed, so it is identical every time. Nobody real appears anywhere.
@@ -460,7 +460,7 @@ const VIEWS = {
   async approvals() {
     const d = await load("approvals");
     return `<h1>Approval Queue</h1>
-      <p class="lede">The system decided and prepared the outreach emails, first contacts and follow-ups. Before anything would leave the building, a person approves it. Review the drafts, approve or reject, and every decision is recorded.</p>
+      <p class="lede">The system decided and prepared the outreach emails, first emails and follow-ups. Before anything would leave the building, a person approves it. Review the drafts, approve or reject, and every decision is recorded.</p>
       <div class="banner"><b>Nothing is sent from this page.</b> In the engine, every draft here is held as <b>pending approval</b>: it cannot reach the simulated send until a named person approves it. Your decisions on this page stay in this browser, because a static page cannot call the engine. When the engine approves an email it checks again (suppression, consent, send window) and only then records it in the simulated log.</div>
       <div id="apKpi"></div>
       <div class="card" id="apBar"></div>
@@ -584,7 +584,7 @@ const VIEWS = {
       <p class="lede">Two separate checks, never mixed. <b>Check 1</b> asks whether the AI reads prospects' replies correctly, using the real model.
       <b>Check 2</b> asks whether the safety net stops a bad AI answer before it can act, using ${rec.summary.recordings} recorded answers, some good and some deliberately broken. It makes no model call.</p>
       <h2>Check 1 · Does the AI read replies correctly?</h2>
-      <div class="card"><p style="margin:0 0 8px">Runs the 18 test cases (14 replies and 4 email openings) through the same path as production: real model, then the checks, then the rules. Each result is compared with the answer a person labelled. It takes about a minute and uses a little of the model credit.</p>
+      <div class="card"><p style="margin:0 0 8px">Runs the 18 test cases (14 replies and 4 email openings) through the same path as production: real model, then the checks, then the rules. Each result is compared with the expected answer (drafted with an AI assistant, human review pending). It takes about a minute and uses a little of the model credit.</p>
         <button class="btn" id="runEval">Run the live eval</button> <button class="btn ghost hidden" id="dlEval">Download results (JSON)</button> <span id="evalProg" class="d"></span>
         <div id="evalOut"></div></div>
       <h3 style="margin:18px 0 4px">What the 18 cases are</h3>
@@ -1219,7 +1219,7 @@ function leadPage() {
   const l = ld.leads[i], a = l.account, d = l.decision, dr = l.draft, sigMax = a.signal_each * a.signal_cap, ai = Boolean(dr && dr.ai);
   const why = `${a.name} (${a.employees} employees, ${a.country}) ${a.size === "ideal" ? "fits the profile by size" : "is below the ideal size"}${a.signals.length ? ` and shows ${a.signals.length} public growth signal${a.signals.length > 1 ? "s" : ""}. First: ${a.signals[0]}` : " and shows no public growth signals yet."}`;
   const next = { contact: "Prepare a personal outreach email and hold it until a person approves it.", nurture: "Keep it in the slow track. No email and no AI call; it is scored again at the next event.", wait: "Wait. The system checks again by itself when the pause ends.", enrich: "Enrich the data first, then decide again.", suppress: "Do not contact.", handoff_ae: "Pass to a sales exec." }[d.action] || d.what;
-  const angle = dr ? `<div class="d" style="margin-bottom:6px">${ai ? '<span class="stamp">✨ AI wrote the opening line</span> from a verified fact' : `<span class="stamp quiet">Fixed template</span> ${dr.step > 1 ? "Follow-up emails (step 2 and 4) use fixed text" : "No usable fact, so no AI line"}`}</div>
+  const angle = dr ? `<div class="d" style="margin-bottom:6px">${ai ? '<span class="stamp">✨ AI wrote the opening line</span> from a verified fact' : `<span class="stamp quiet">Fixed template</span> ${dr.step === 2 || dr.step === 4 ? "Steps 2 and 4 use fixed text, with no opening line" : "No usable fact, so no AI line"}`}</div>
       <div class="email"><div class="hdr">Prepared automatically · waits for a person's approval · nothing is sent</div><div><b>${esc(dr.subject)}</b></div><div class="body">${esc(dr.body)}</div></div>`
     : `<div class="d">${d.action === "nurture" ? "No email is drafted for a weaker-fit company, and the model is not called." : "No email was drafted: the rules stopped before that step."}</div>`;
   $("#leadList").classList.add("hidden");
@@ -1352,7 +1352,7 @@ function renderApprovals() {
     $("#apDetail").innerHTML = `<h3 style="margin:0">${esc(sel.name)} ${tagFor(s)}</h3><div class="d">${esc(sel.country)} · ${esc(sel.industry)} · ${sel.employees ?? "?"} employees</div>
       <div class="email" style="margin-top:10px"><div class="hdr">To ${esc(sel.contact.name)} (${esc(sel.contact.title || "")}) · from ${esc(sel.sender)} · ${sel.step > 1 ? `<b>follow-up, step ${sel.step}</b>` : "<b>first email</b>"} · <b>held, not sent</b></div>
         <div><b>${esc(sel.subject)}</b></div><div class="body">${apBody(sel)}</div></div>
-      <div class="d" style="margin-top:6px">${sel.mode === "personalized" ? '<mark class="ai">Highlighted</mark> is the opening line the AI wrote by restating one verified fact. The rest is the approved template.' : "Generic template: there was no verified fact to mention, so the AI was not used."}</div>
+      <div class="d" style="margin-top:6px">${sel.mode === "personalized" ? '<mark class="ai">Highlighted</mark> is the opening line the AI wrote by restating one verified fact. The rest is the approved template.' : (sel.step === 2 || sel.step === 4 ? "Fixed text: steps 2 and 4 have no opening line, so the AI was not used." : "Generic template: there was no verified fact to mention, so the AI was not used.")}</div>
       <h3 style="margin:12px 0 4px">Why this email was prepared</h3>
       <ul class="why"><li>Passed all 12 safety checks (not suppressed, not a customer, no open deal, not contacted recently…).</li>
         <li>Priority <b>${sel.score}</b>: size ${sel.parts.size} + payment pain ${sel.parts.pain} + growth signals ${sel.parts.signals} → ${esc(TIER_NAME[sel.tier])}.</li>

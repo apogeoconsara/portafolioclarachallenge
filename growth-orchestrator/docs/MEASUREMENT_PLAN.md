@@ -26,7 +26,7 @@ value on top of that instead of riding on it.
 - **Assignment:** stratified by country × employee band × prior touch, deterministic hash within stratum
   (`data/generated/experiment_assignments.jsonl`), 50/50.
 - **Group A (control):** today's process. **Group B (treatment):** the orchestrator, with people on the review queue and on the
-  approval of outreach emails (first contacts and follow-ups).
+  approval of outreach emails (first emails and follow-ups).
 - **Rollout:** group B does not start at full volume. It starts small (for example 10%, 25%, 50%, then 100% of planned volume)
   and each increase passes a gate that checks the guardrails (see Stop rules). The schedule is a design choice, to be set with
   Clara's real deliverability data.
@@ -47,9 +47,10 @@ a point to settle with Clara's real volumes.
 **The rule for the AI.** It stays in a task only if B2 beats B1 on qualified pipeline per 1,000 targeted accounts **and** on
 cost per qualified lead, without breaking a guardrail, and with zero unsafe AI actions. Reviewer corrections of its labels are
 tracked so that a reviewer's workload does not simply replace the SDR's. If it does not win, it is switched off there and the
-rules keep working. The decision log lists the AI as
-unproven for personalisation today: only one of the two live-eval cases where personalisation was possible was personalised,
-and nothing yet ties it to pipeline.
+rules keep working. The AI already personalises: in the recorded month it wrote the opening line of 4,099 of 6,759 outreach
+drafts (the model's answer in that run is an offline stand-in). What nothing yet shows is whether those emails create more
+pipeline: the simulation gives AI-written emails no advantage, and in the live eval only one of the two cases where
+personalisation was possible was personalised ([AI.md](AI.md#latest-live-run-2026-10-07)).
 
 Optional: a small holdout of eligible accounts that nobody contacts would show how much pipeline arrives with no outreach at
 all, which is what makes the lift incremental rather than merely larger.

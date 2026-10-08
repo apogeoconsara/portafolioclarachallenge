@@ -13,16 +13,57 @@ named person approves it, and goes only to a simulated log: **nothing is ever se
 
 **Live site:** https://clara-growth-orchestration.netlify.app
 
+## The idea in one minute
+
+A growth team that targets thousands of companies a month cannot look at each one. Someone has to decide, account by account, whether
+it is safe to contact, who should do it and what to say, and that slow, repetitive work is where mistakes happen: a customer gets a
+cold email, an opt-out is ignored, the same message goes out twice.
+
+This system takes that decision over, and keeps people for the cases that need judgment:
+
+- **It listens to events** (a company is targeted, a prospect replies, an email bounces) and keeps each company's state.
+- **Rules decide**: who is eligible, what the next best action is, which sales exec gets the account, and when. They are plain,
+  testable and the same every time. A score picks the track among eligible companies: a personal outreach email, or the slower
+  nurture path.
+- **The AI helps in two small places**: it reads a prospect's reply (what they meant, what they stated) and it writes one opening
+  line from a verified fact. Its answers are checked before anything uses them; if a check fails, the account goes to a person or
+  gets the approved template.
+- **A person approves every outreach email.** Nothing is ever sent: even an approved email goes only to a simulated log.
+- **Everything is audited**, so any decision can be traced back to the event, the rule and the score version behind it.
+
+The rest of this page says where to see each piece.
+
 ## Start here
 
 - **2 minutes.** Open the site. *Command Center* runs the whole month by itself in 25 seconds and ends on what it means for the
   team. Then *Live Demo → Scenarios* and pick *Unsubscribe arrives late*.
 - **5 minutes.** Add *Live Demo → Leads* (open a company, press **Ask Claude**), *Decisions → Prioritization* (edit the weights, compare
   two scoring versions) and *AI & Safety → Evaluation*. The table below says what each section does.
+- **Architecture and tradeoffs.** The [architecture diagram and key decisions](#architecture) are below; the [decision log](growth-orchestrator/docs/DECISION_LOG.md) has what was not built and why.
 - **15 minutes.** Read the [decision log](growth-orchestrator/docs/DECISION_LOG.md) (what was not built and why, the biggest tradeoff and
   the biggest production risk) and the [measurement plan](growth-orchestrator/docs/MEASUREMENT_PLAN.md) (how we would know it works).
 
+## Try it yourself
+
+Python 3.11+ and nothing to install. Every command runs from `growth-orchestrator/`.
+
+```bash
+git clone https://github.com/apogeoconsara/portafolioclarachallenge.git
+cd portafolioclarachallenge/growth-orchestrator
+python3 -m orchestrator demo                       # six flows step by step: success, duplicate, failure, unsafe AI...
+python3 -m orchestrator stream                     # the 561 sample deliveries through the engine, summarised
+python3 -m unittest discover -s tests -t .         # the tests (5 skip without the 50k world)
+cd .. && python3 -m http.server 8000 --directory public   # the site, at http://localhost:8000
+```
+
+Sending a webhook yourself and approving the email (`serve`, sample world), generating the 50k world and using the real model with your
+own key are in [setup and usage](growth-orchestrator/README.md#setup-and-usage). The live AI buttons need the deployed site, because
+they call a Netlify function.
+
 ## What the challenge asks, and where to see it
+
+<details>
+<summary>Show the table</summary>
 
 | The challenge asks for | Where to see it on the site | Where it is proven |
 |---|---|---|
@@ -42,7 +83,55 @@ named person approves it, and goes only to a simulated log: **nothing is ever se
 
 The full map, requirement by requirement, is in [growth-orchestrator/data/TRACEABILITY.md](growth-orchestrator/data/TRACEABILITY.md).
 
+</details>
+
+## Architecture
+
+```mermaid
+flowchart LR
+  W[Webhooks<br/>list import · CRM mirror · replies<br/>bounces · meetings · opportunities] --> I[Intake<br/>schema/type check<br/>dedupe: delivery · key · content<br/>stale · dead-letter]
+  I --> S[(State · SQLite<br/>accounts · contacts · opps<br/>suppression · touches · facts<br/>versioned per account)]
+  S --> R[Rules engine<br/>eligibility · next best action<br/>AE routing · window · caps]
+  R --> SC[Score and track<br/>priority score, versioned]
+  SC -- tier A / B --> L[LLM · real model<br/>forced tool call]
+  SC -- tier C --> N[Nurture track<br/>record only: no email, no AI]
+  R -- reply text --> L
+  L --> V[Validators<br/>schema · quotes · dates · claims<br/>opt-out guard · injection · confidence]
+  V -- label --> R
+  V -- grounded copy --> AP[Approval gate<br/>held as pending_approval until a named person approves]
+  AP --> X[Executor<br/>idempotency keys · backoff<br/>reconcile uncertain outcomes]
+  X --> M[Mock systems<br/>CRM · enrichment · calendar<br/>email = simulated log only]
+  R --> H[Human review queue]
+  V --> H
+  X --> H
+  I & R & SC & L & X --> A[(Audit log<br/>includes the score version)]
+```
+
+Code map: `growth-orchestrator/orchestrator/` is the engine (`rules.py` decides, `ai/` proposes and validates, `executor.py` and `mocks.py`
+act), `growth-orchestrator/generator/` builds the synthetic world, `netlify/functions/orchestrator-llm.mjs` is the live AI endpoint (key
+server-side, no email code) and `public/` is the page.
+
+## Key decisions and tradeoffs
+
+- **The model proposes, deterministic code decides.** The model labels and extracts; rules choose the action, the AE,
+  the timing and whether anything is sent. Opt-outs are honoured by rules even if the model disagrees or is down.
+- **Safety over automation rate.** Anything uncertain goes to a human queue instead of being guessed.
+- **Exactly-once by idempotency key plus lookup before retry**, so uncertain outcomes never become double sends.
+- **No outreach email executes without a person.** The engine drafts and holds every outreach email (first or follow-up)
+  as `pending_approval`; only `approve()` by a named reviewer releases it to the mock send, and the executor refuses
+  anything unapproved (tested: zero sends on the whole sample stream until someone approves). The Approval Queue page shows
+  the reviewer's side, but its decisions stay in the browser: a static page cannot call the engine. There is no reviewer
+  sign-in or production queue.
+- **Recorded, simulated and live are always labelled.** Operations metrics come from running all 55,959 events through
+  the engine with an offline stand-in for the model, not a real one.
+
+What I did not build, where I did not use AI, the biggest tradeoff and the biggest production risk are in the
+[decision log](growth-orchestrator/docs/DECISION_LOG.md).
+
 ## Section by section
+
+<details>
+<summary>Show the table</summary>
 
 Follow the left menu. Every view says whether what you see is **recorded** (a stored run of the real engine), **simulated** (a
 stand-in or an assumption) or **live** (the real model, called when you press a button).
@@ -61,6 +150,8 @@ stand-in or an assumption) or **live** (the real model, called when you press a 
 | **Operations → Metrics** | The whole month of events as operating numbers. | Automation and review rates, failures, duplicates ignored, dead letters and the AI cost assumption (an offline stand-in for the model, so this measures the safety layer, not a real model). |
 | **Operations → Event stream** | All 561 deliveries of the 500-account sample, including duplicates, garbage, late events and every mock failure, through one engine instance. | How many decisions match the independent answer key (561 of 561), how each delivery was handled and what it ended as, and how many items went to a person or to the dead-letter queue. |
 | **Architecture** | How the pieces fit and how this meets the challenge. | The diagram, a table of every requirement and where to see it and where it is proven, the 89 situations behind the tests and the reference flows. |
+
+</details>
 
 ## What is real, simulated and live
 

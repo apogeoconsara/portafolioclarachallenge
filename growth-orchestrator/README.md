@@ -121,7 +121,7 @@ The site is static plus one function, published by Netlify from `main` (`netlify
 
 ## What the page shows
 
-The [root README](../README.md#quick-tour-for-reviewers-about-5-minutes) has a table with what each section of the page does and
+The [root README](../README.md#section-by-section) has a table with what each section of the page does and
 what to look at in it.
 
 ## Status and open items
@@ -134,31 +134,9 @@ what to look at in it.
 - Open policy question, not changed: the rules put the account owner before the 90-day cooldown after a lost deal
   (see the decision log); it would be validated with Sales and Growth in production.
 
-## Architecture
+## Architecture, key decisions and tradeoffs
 
-```mermaid
-flowchart LR
-  W[Webhooks<br/>list import · CRM mirror · replies<br/>bounces · meetings · opportunities] --> I[Intake<br/>schema/type check<br/>dedupe: delivery · key · content<br/>stale · dead-letter]
-  I --> S[(State · SQLite<br/>accounts · contacts · opps<br/>suppression · touches · facts<br/>versioned per account)]
-  S --> R[Rules engine<br/>eligibility · next best action<br/>AE routing · window · caps]
-  R --> SC[Score and track<br/>priority score, versioned]
-  SC -- tier A / B --> L[LLM · real model<br/>forced tool call]
-  SC -- tier C --> N[Nurture track<br/>record only: no email, no AI]
-  R -- reply text --> L
-  L --> V[Validators<br/>schema · quotes · dates · claims<br/>opt-out guard · injection · confidence]
-  V -- label --> R
-  V -- grounded copy --> AP[Approval gate<br/>held as pending_approval until a named person approves]
-  AP --> X[Executor<br/>idempotency keys · backoff<br/>reconcile uncertain outcomes]
-  X --> M[Mock systems<br/>CRM · enrichment · calendar<br/>email = simulated log only]
-  R --> H[Human review queue]
-  V --> H
-  X --> H
-  I & R & SC & L & X --> A[(Audit log<br/>includes the score version)]
-```
-
-Code map: `orchestrator/` is the engine (`rules.py` decides, `ai/` proposes and validates, `executor.py` and `mocks.py`
-act), `generator/` builds the synthetic world, `../netlify/functions/orchestrator-llm.mjs` is the live AI endpoint (key
-server-side, no email code) and `../public/` is the page.
+The architecture diagram and the key decisions and tradeoffs are in the [root README](../README.md#architecture).
 
 ## AI evaluation
 
@@ -174,23 +152,6 @@ One run, and not an independent test: the 18 cases were used to tune the prompt.
 personalization was possible was personalized, and the known overconfident-label risk is not closed. Details, files and
 limits: [docs/AI.md](docs/AI.md#latest-live-run-2026-10-07). The recorded suite (220 outputs, validators only, no model)
 is in `evals/results/`.
-
-## Key decisions and tradeoffs
-
-- **The model proposes, deterministic code decides.** The model labels and extracts; rules choose the action, the AE,
-  the timing and whether anything is sent. Opt-outs are honoured by rules even if the model disagrees or is down.
-- **Safety over automation rate.** Anything uncertain goes to a human queue instead of being guessed.
-- **Exactly-once by idempotency key plus lookup before retry**, so uncertain outcomes never become double sends.
-- **No outreach email executes without a person.** The engine drafts and holds every outreach email (first or follow-up)
-  as `pending_approval`; only `approve()` by a named reviewer releases it to the mock send, and the executor refuses
-  anything unapproved (tested: zero sends on the whole sample stream until someone approves). The Approval Queue page shows
-  the reviewer's side, but its decisions stay in the browser: a static page cannot call the engine. There is no reviewer
-  sign-in or production queue.
-- **Recorded, simulated and live are always labelled.** Operations metrics come from running all 55,959 events through
-  the engine with an offline stand-in for the model, not a real one.
-
-What I did not build, where I did not use AI, the biggest tradeoff and the biggest production risk are in the
-[decision log](docs/DECISION_LOG.md).
 
 ## Provenance
 
