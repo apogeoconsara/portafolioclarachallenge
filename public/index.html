@@ -285,7 +285,7 @@ async function load(name) { if (!DATA[name]) DATA[name] = await (await fetch(`da
 // ---------------------------------------------------------------------------------------------------------------
 const VIEWS = {
   async overview() {
-    const [ov, runs, stream, ev, ap, ms, rp] = await Promise.all([load("overview"), load("runs"), load("stream"), load("evals"), load("approvals"), load("measurement"), load("replay")]);
+    const [ov, runs, stream, ev, ap, ms, rp, op] = await Promise.all([load("overview"), load("runs"), load("stream"), load("evals"), load("approvals"), load("measurement"), load("replay"), load("operations")]);
     const aps = apStats(ap);
     const n = runs.scenarios.length, A = outcomeActions(ov), hm = hoursModel(ov);
     const B = { auto: A.contact + (A.nurture || 0) + A.wait + A.enrich, people: A.handoff_ae + A.escalate_human, blocked: A.suppress };
@@ -359,9 +359,9 @@ const VIEWS = {
       </div>
       <div class="card" style="margin-top:12px">
         <h3>Where does the AI fit, and how would we know it helps?</h3>
-        <p class="d" style="margin:0 0 6px">The AI does two small jobs. It <b>reads replies</b>, which are free text that rules cannot parse, and it <b>writes one opening line</b> from a verified fact. Who to contact, when and which sales rep are decided by rules, not by the AI.</p>
-        <p class="d" style="margin:0 0 6px">The comparison above measures the whole system against today's process, so it cannot tell how much comes from the AI. To isolate it, group B is split in two: <b>B1 without AI</b> (same rules, approved template, replies read by a person) and <b>B2 with AI</b>. The AI keeps its place only if B2 beats B1 on qualified pipeline <i>and</i> on cost per qualified lead, with no guardrail broken. If it does not, it is switched off for that job and the rules keep working.</p>
-        <span class="tag warn">B1 against B2 is proposed, not simulated: the numbers above do not include the AI's own effect</span>
+        <p class="d" style="margin:0 0 6px">The AI does two small jobs. It <b>reads replies</b>, which are free text that rules cannot parse, and it <b>personalizes emails</b>: it writes one opening line from a verified fact about the company. That is where it adds value. In the recorded month it wrote the opening line of <b>${fmt(op.ai.by_kind.draft)} of ${fmt(op.final_actions.contact)}</b> outreach drafts (${(100 * op.ai.by_kind.draft / op.final_actions.contact).toFixed(0)}%); the rest use fixed text. Who to contact, when and which sales rep are decided by rules, not by the AI.</p>
+        <p class="d" style="margin:0 0 6px">What is still to be measured is whether those personalized emails also create more qualified pipeline. The comparison above measures the whole system, so it cannot isolate the AI. To do that, group B is split in two: <b>B1 without AI</b> (same rules, approved template, replies read by a person) and <b>B2 with AI</b>. The AI keeps its place in a job only if B2 beats B1 on qualified pipeline <i>and</i> on cost per qualified lead, with no guardrail broken.</p>
+        <span class="tag warn">personalization: recorded run, the model's answer is an offline stand-in</span> <span class="tag warn">effect on pipeline (B1 against B2): proposed, not simulated</span>
       </div>
       <details class="card" style="margin-top:12px"><summary>For analysts: funnel, guardrails with intervals, gradual rollout, safeguard, detection time</summary>
         <h3 style="margin:12px 0 6px">The funnel, per 1,000 companies (simulated)</h3>
