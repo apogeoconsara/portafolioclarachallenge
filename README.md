@@ -39,6 +39,7 @@ The rest of this page says where to see each piece.
   team. Then *Live Demo → Scenarios* and pick *Unsubscribe arrives late*.
 - **5 minutes.** Add *Live Demo → Leads* (open a company, press **Ask Claude**), *Decisions → Prioritization* (edit the weights, compare
   two scoring versions) and *AI & Safety → Evaluation*. The table below says what each section does.
+- **Architecture and tradeoffs.** The [architecture diagram and key decisions](growth-orchestrator/README.md#architecture) are in the engine README; the [decision log](growth-orchestrator/docs/DECISION_LOG.md) has what was not built and why.
 - **15 minutes.** Read the [decision log](growth-orchestrator/docs/DECISION_LOG.md) (what was not built and why, the biggest tradeoff and
   the biggest production risk) and the [measurement plan](growth-orchestrator/docs/MEASUREMENT_PLAN.md) (how we would know it works).
 
