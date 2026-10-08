@@ -42,6 +42,23 @@ The rest of this page says where to see each piece.
 - **15 minutes.** Read the [decision log](growth-orchestrator/docs/DECISION_LOG.md) (what was not built and why, the biggest tradeoff and
   the biggest production risk) and the [measurement plan](growth-orchestrator/docs/MEASUREMENT_PLAN.md) (how we would know it works).
 
+## Try it yourself
+
+Python 3.11+ and nothing to install. Every command runs from `growth-orchestrator/`.
+
+```bash
+git clone https://github.com/apogeoconsara/portafolioclarachallenge.git
+cd portafolioclarachallenge/growth-orchestrator
+python3 -m orchestrator demo                       # six flows step by step: success, duplicate, failure, unsafe AI...
+python3 -m orchestrator stream                     # the 561 sample deliveries through the engine, summarised
+python3 -m unittest discover -s tests -t .         # the tests (5 skip without the 50k world)
+cd .. && python3 -m http.server 8000 --directory public   # the site, at http://localhost:8000
+```
+
+Sending a webhook yourself and approving the email (`serve`, sample world), generating the 50k world and using the real model with your
+own key are in [setup and usage](growth-orchestrator/README.md#setup-and-usage). The live AI buttons need the deployed site, because
+they call a Netlify function.
+
 ## What the challenge asks, and where to see it
 
 | The challenge asks for | Where to see it on the site | Where it is proven |
