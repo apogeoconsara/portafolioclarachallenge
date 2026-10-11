@@ -167,7 +167,7 @@ stand-in or an assumption) or **live** (the real model, called when you press a 
 
 A reviewer sign-in and a production approval queue (the Approval Queue page keeps decisions in the browser; the engine enforces
 `approve()` by a named person); real CRM, calendar and email integrations; a model-accuracy claim (the live eval is one set of 18
-cases that also tuned the prompt). The AI-drafted data and texts are pending the author's human review. Details and reasons are in the
+cases that also tuned the prompt). The data and texts were drafted with an AI assistant. Details and reasons are in the
 decision log.
 
 ## Run it yourself
