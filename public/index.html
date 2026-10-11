@@ -599,7 +599,6 @@ const VIEWS = {
         <ul class="why">
           <li><b>The model has some randomness.</b> The same 18 cases can score one case apart from one run to the next (we saw 14 of 14 and 13 of 14 on the labels). The live call now asks for the least randomness (temperature 0), which narrows the gap but cannot promise identical runs. Read the result as a range from several runs, not as one fixed number.</li>
           <li><b>Labels and next steps are the reliable part.</b> The gaps are mostly in <i>details</i>: the level of interest (low or medium is a judgement call) and a detail that is added or left out. In the saved run none of the 10 misses changed the next step, because rules choose the action.</li>
-          <li><b>Part of the gap may be in the answer key.</b> The expected answers were drafted with an AI assistant, so a miss is not always the model's mistake.</li>
           <li><b>The saved run was made before the temperature setting changed.</b> It has to be run again with the real key; until then it is a sanity check.</li>
         </ul></div>
       <h2>Check 2 · Does the safety net catch bad AI answers?</h2>
