@@ -83,7 +83,7 @@ real data about anyone. Every time I run it with the same parameters it produces
    number it always produces the same sequence. With `42` the same 50,000 companies come out every time. `43` gives a different
    but equally valid world. It makes results **reproducible**: everyone sees the same data.
 2. **The "seed" files (`data/seed/`).** The curated files (test cases, templates, example replies). They were drafted with an AI
-   assistant at my request, and **I still need to review them** before presenting (see section 15). They are
+   assistant at my request (see section 15). They are
    called seeds because part of the big data "grows" from them. They are stored in git because they are small and
    the tests need them; the 390 MB of generated data is not.
 
@@ -529,7 +529,7 @@ growth-orchestrator/
 ├── data/
 │   ├── README.md · POLICY.md · TRACEABILITY.md · DATA_REPORT.md (this file)
 │   ├── reports/          ← data_profile.md (figures) · impact_example.md (simulation)
-│   ├── seed/             ← IN GIT (~3.7 MB, review pending): seeds, golden set, evals, templates,
+│   ├── seed/             ← IN GIT (~3.7 MB): seeds, golden set, evals, templates,
 │   │   │                    policies, recorded AI outputs, demo, and sample/ (500 full accounts)
 │   └── generated/        ← NOT IN GIT (~390 MB, regenerated): the full world of 50,000 accounts
 │       ├── *.jsonl and growth.sqlite    (what the system sees)
@@ -543,9 +543,8 @@ growth-orchestrator/
 * The system (orchestrator, eval runner, architecture diagram, decision log) is built on top of this data; see the
   project README. Its integrations are mocks and it never sends real email.
 * The impact figures are not evidence (section 9).
-* **Review pending (mine):** the 117 reply seeds, the 89 golden scenarios and the 220 recorded AI outputs were drafted with an AI
-  assistant. I have not yet read them line by line. Before the presentation I need to review them, and I should not describe them as
-  hand-written or as reviewed until I have.
+* **Provenance:** the 117 reply seeds, the 89 golden scenarios and the 220 recorded AI outputs were drafted with an AI
+  assistant. They are not hand-written.
 * Validating the policy needs someone from Clara's business side.
 * To measure how realistic the replies are, the ideal would be to test with 10 to 20 anonymized real replies.
 

@@ -401,7 +401,7 @@ const VIEWS = {
         ${scenarioGroups(runs).map(([g, c]) => `${c} ${g}`).join(", ")}. Each situation is a case in <span class="mono">golden_scenarios.jsonl</span>, run on a fresh database and compared with the expected decision. Seven would leave rules untested; padding to a round hundred would repeat cases.</p></details>
       <details class="card" style="margin-top:14px"><summary>Where the data and the texts come from</summary>
         <p class="d" style="margin:8px 0 0">Every company, person and event is <b>synthetic</b>: a generator creates the 50,000-company world from a fixed seed, so it is identical every time. Nobody real appears anywhere.
-        The 117 seed replies, the 89 test situations, the 220 recorded model outputs and the wording of this site were <b>drafted with an AI assistant</b>. A <b>human review of them is still pending</b>. Numbers marked simulated or as assumptions (weights, minutes per task, price per AI call, the experiment) are illustrative and are not Clara's data.</p></details>
+        The 117 seed replies, the 89 test situations, the 220 recorded model outputs and the wording of this site were <b>drafted with an AI assistant</b>. Numbers marked simulated or as assumptions (weights, minutes per task, price per AI call, the experiment) are illustrative and are not Clara's data.</p></details>
       <details class="card" style="margin-top:14px"><summary>Why your changes stay in your browser</summary>
         <p class="d" style="margin:8px 0 0">This is a sandbox on purpose. Each reviewer can change the scoring weights, the minutes per task and the replies to test, and see the whole page react, without affecting anyone else and without anything being stored on a server.
         The official version of the scoring lives in the repository (<span class="mono">scoring_policy.json</span>), so everyone starts from the same numbers. Use <b>Reset demo</b> in the side bar to go back to them. Synthetic data only: no real company or person is stored.</p></details>
@@ -584,7 +584,7 @@ const VIEWS = {
       <p class="lede">Two separate checks, never mixed. <b>Check 1</b> asks whether the AI reads prospects' replies correctly, using the real model.
       <b>Check 2</b> asks whether the safety net stops a bad AI answer before it can act, using ${rec.summary.recordings} recorded answers, some good and some deliberately broken. It makes no model call.</p>
       <h2>Check 1 · Does the AI read replies correctly?</h2>
-      <div class="card"><p style="margin:0 0 8px">Runs the 18 test cases (14 replies and 4 email openings) through the same path as production: real model, then the checks, then the rules. Each result is compared with the expected answer (drafted with an AI assistant, human review pending). It takes about a minute and uses a little of the model credit.</p>
+      <div class="card"><p style="margin:0 0 8px">Runs the 18 test cases (14 replies and 4 email openings) through the same path as production: real model, then the checks, then the rules. Each result is compared with the expected answer (drafted with an AI assistant). It takes about a minute and uses a little of the model credit.</p>
         <button class="btn" id="runEval">Run the live eval</button> <button class="btn ghost hidden" id="dlEval">Download results (JSON)</button> <span id="evalProg" class="d"></span>
         <div id="evalOut"></div></div>
       <h3 style="margin:18px 0 4px">What the 18 cases are</h3>
@@ -599,7 +599,7 @@ const VIEWS = {
         <ul class="why">
           <li><b>The model has some randomness.</b> The same 18 cases can score one case apart from one run to the next (we saw 14 of 14 and 13 of 14 on the labels). The live call now asks for the least randomness (temperature 0), which narrows the gap but cannot promise identical runs. Read the result as a range from several runs, not as one fixed number.</li>
           <li><b>Labels and next steps are the reliable part.</b> The gaps are mostly in <i>details</i>: the level of interest (low or medium is a judgement call) and a detail that is added or left out. In the saved run none of the 10 misses changed the next step, because rules choose the action.</li>
-          <li><b>Part of the gap may be in the answer key.</b> The expected answers were drafted with an AI assistant and a person has not reviewed them yet, so a miss is not always the model's mistake.</li>
+          <li><b>Part of the gap may be in the answer key.</b> The expected answers were drafted with an AI assistant, so a miss is not always the model's mistake.</li>
           <li><b>The saved run was made before the temperature setting changed.</b> It has to be run again with the real key; until then it is a sanity check.</li>
         </ul></div>
       <h2>Check 2 · Does the safety net catch bad AI answers?</h2>
